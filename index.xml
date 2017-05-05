@@ -37,10 +37,10 @@
       <guid>https://horeaporutiu.github.io/post/bluemix-hello-nodejs/</guid>
       <description>Let&amp;rsquo;s learn how to build that Node.js web-server using Bluemix! Before we start, you will need to do a few things.
  Initial Setup 1) Get a Bluemix Account
-2) Install Homebrew or another package manager
-3) Install npm and Node
+2) Install Homebrew if you have a mac. Otherwise, skip this step.
+3) Install npm/node for Mac or npm/node for Windows
 4) Install cf command line tool
-Starter Code Open up terminal, and use the following git commands: $ git clone https://github.com/IBM-Bluemix/bluemix-hello-node $ cd bluemix-hello-node Test Locally $ npm install $ npm start  Once the server is up and running, you can type in your browser “localhost:8080” and you should see the hello world app.</description>
+Starter Code Open up terminal, and use the following git commands: $ git clone https://github.</description>
     </item>
     
   </channel>
