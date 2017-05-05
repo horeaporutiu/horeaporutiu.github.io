@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# website: http://ogp.me/ns/website#">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta name="description" content="">
+    <meta property="og:title" content="Run Node.js server with Bluemix">
+    
+    <meta property="og:type" content="article">
+    <meta property="article:published_time" content="2017-05-04">
+    
+    <meta property="og:description" content="">
+    <meta property="og:url" content="https://horeaporutiu.github.io/post/bluemix-hello-nodejs/">
+    <meta property="og:site_name" content="Horea Porutiu">
+    
+    <meta name="generator" content="Hugo 0.21-DEV" />
+    <title>Run Node.js server with Bluemix &middot; Horea Porutiu</title>
+    
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.7/styles/default.min.css">
+    
+    <link rel="stylesheet" href="https://horeaporutiu.github.io/css/style.css">
+    
+    <link href="https://horeaporutiu.github.io/index.xml" rel="alternate" type="application/rss+xml" title="Horea Porutiu" />
+    
+    
+    <link rel="icon" href="https://horeaporutiu.github.io/favicon.ico" />
+    
+
+    
+    
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top visible-xs">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			
+				<a class="navbar-brand" href="https://horeaporutiu.github.io/">Horea Porutiu</a>
+			
+		</div>
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			<ul class="nav navbar-nav">
+				
+				
+					<li><a href="https://horeaporutiu.github.io/about/">About</a></li>
+				
+					<li><a href="https://horeaporutiu.github.io/">Blog</a></li>
+				
+					<li><a href="https://horeaporutiu.github.io/tutorial/">Tutorials</a></li>
+				
+			</ul>
+		</div>
+	</div>
+</nav>
+<div class="container-fluid">
+	<div class="row">
+		<div id="menu" class="hidden-xs col-sm-4 col-md-3">
+	<div id="menu-content" class="vertical-align">
+		
+			<h1 class="text-center"><a href="https://horeaporutiu.github.io/">Horea Porutiu</a></h1>
+		
+		
+		
+			<small class="text-center center-block">Software Engineer</small>
+		
+		
+		
+			<img id="profile-pic" src="https://horeaporutiu.github.io//img/profPic.JPG" alt="My Picture" class="img-circle center-block">
+		
+		<div id="social" class="text-center">
+			
+				<a href="https://github.com/horeaporutiu"><i class="fa fa-github fa-2x"></i></a>
+			
+				<a href="https://twitter.com/horeaporutiu"><i class="fa fa-twitter fa-2x"></i></a>
+			
+				<a href="https://linkedin.com/in/hporutiu"><i class="fa fa-linkedin fa-2x"></i></a>
+			
+				<a href="https://stackoverflow.com/users/6785292/horea-porutiu?tab=profile"><i class="fa fa-stack-overflow fa-2x"></i></a>
+			
+
+			<a href="mailto:horeaporutiu@gmail.com"><i class="fa fa-envelope-o fa-2x"></i></a>
+		</div>
+		<div id="links" class="text-center">
+			
+			
+				<a href="https://horeaporutiu.github.io/about/">About</a>
+			
+				<a href="https://horeaporutiu.github.io/">Blog</a>
+			
+				<a href="https://horeaporutiu.github.io/tutorial/">Tutorials</a>
+			
+		</div>
+	</div>
+</div>
+
+		<div id="content" class="col-xs-12 col-sm-8 col-md-9">
+			<div class="row">
+				<div id="post" class="col-sm-offset-1 col-sm-10 col-md-10 col-lg-8">
+
+<main>
+	<header>
+		<h1>Run Node.js server with Bluemix</h1>
+	</header>
+
+	<article>
+		<p>Let&rsquo;s learn how to build that Node.js web-server using Bluemix! Before we start, you will need to do a few things.</p>
+
+<hr>
+
+<h4 id="setup">Initial Setup</h4>
+
+<p>1) Get a <a href="https://console.ng.bluemix.net/registration/">Bluemix Account</a></p>
+
+<p>2) Install <a href="https://brew.sh/">Homebrew</a> or
+another package manager</p>
+
+<p>3) Install <a href="//blog.teamtreehouse.com/install-node-js-npm-mac">npm</a> and Node</p>
+
+<p>4) Install <a href="//blog.teamtreehouse.com/install-node-js-npm-mac">cf</a>
+command line tool<hr></p>
+
+<h4 id="code">Starter Code</h4>
+Open up terminal, and use the following git commands:
+
+<pre><code class="language-toml">$ git clone https://github.com/IBM-Bluemix/bluemix-hello-node
+$ cd bluemix-hello-node</code></pre>
+<br>
+<h4 id="test">Test Locally</h4>
+
+<pre><code class="language-toml">$ npm install
+$ npm start
+</code></pre>
+Once the server is up and running, you can type in your browser “localhost:8080” and you should see the hello world app. If the page is blank, or there is an error, make sure you are in the bluemix-hello-node directory and that there are no
+errors in the installation of npm or starting the server.<br>
+
+If everything is all and well, your site should look similar to this: <img src="../../img/hello.png" alt="Mountain View" style="width:600px;height:228px;">
+
+<br><br>
+
+<h4 id="Bluemix">Bluemix Login</h4>
+
+Firstly, set the enviornment with the cf api command:
+
+<pre><code class="language-toml">$ cf api https://api.ng.bluemix.net
+</code></pre>
+
+<p>If all went well, you should see this:</p>
+
+<p>Setting api endpoint to <a href="https://api.ng.bluemix.net..">https://api.ng.bluemix.net..</a>.
+OK</p>
+
+<p>Next we need to login to Bluemix:</p>
+
+<pre><code class="language-toml">$ cf login
+</code></pre>
+
+<p>If you have a IBM w3ID, this will not work, and you will have to use this command
+instead:</p>
+
+<pre><code class="language-toml">$ cf login -sso
+</code></pre>
+
+<p>You’ll get prompted with a one time code, and then you can simply copy and paste that code to login.
+<hr>
+<h4 id="deploy">Deploy</h4></p>
+
+<p>This is the cool part! Getting to put that app out there!</p>
+
+<p>Firstly, let’s open up our manifest.yml in your favorite text editor, mine being <a href="https://atom.io/">Atom</a>.</p>
+
+<p>Now we must come up with a unique URL for our site. This is done by changing the host: line in the manifest.yml file.</p>
+
+<p>Change the line host: hello-node to username-hello-node. Should look similar to this, except with your
+own user name, not mine. <img src="../../img/hostName.png" alt="Mountain View" style="width:600px;height:100px;"></p>
+
+<p>One last command:</p>
+
+<pre><code class="language-toml">$ cf push
+</code></pre>
+
+<p>If you run into this error <img src="../../img/failed.png" alt="Mountain View" style="width:600px;height:130px;"> it is because the name is not unique.
+<hr>
+<h4 id="conclusion">Conclusion</h4></p>
+
+<p>If there are no errors, you are officially deployed! Go to <a href="http://username-hello-node.mybluemix.net/">http://username-hello-node.mybluemix.net/</a> to see your finished product! One last thing: if you want to make some changes, simply change something in the index.html file for example, and then just use cf push to deploy your latest changes. Happy coding!</p>
+
+	</article>
+</main>
+
+<div id="bottom-nav" class="text-center center-block">
+	<a href=" https://horeaporutiu.github.io/" class="btn btn-default"><i class="fa fa-home"></i> Home</a>
+</div>
+
+
+  <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'https-horeaporutiu-github-io-1';
+    var disqus_identifier = 'https:\/\/horeaporutiu.github.io\/post\/bluemix-hello-nodejs\/';
+    var disqus_title = 'Run Node.js server with Bluemix';
+    var disqus_url = 'https:\/\/horeaporutiu.github.io\/post\/bluemix-hello-nodejs\/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+  </div>
+  
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'code-here', 'auto');
+    ga('send', 'pageview');
+    window.baseURL = "https:\/\/horeaporutiu.github.io\/";
+  </script>
+  
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.2/js/bootstrap.min.js"></script>
+  
+  <script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/topojson/1.6.9/topojson.min.js"></script>
+  
+  
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.7/highlight.min.js"></script>
+  
+  <script src="https://horeaporutiu.github.io//js/App.js"></script>
+  
+</body>
+</html>
