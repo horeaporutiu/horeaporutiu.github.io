@@ -8,6 +8,11 @@
   </url>
   
   <url>
+    <loc>https://horeaporutiu.github.io/tutorials/tutor/</loc>
+    <lastmod>2017-05-04T14:18:15-07:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://horeaporutiu.github.io/post/bluemix-hello-nodejs/</loc>
     <lastmod>2017-05-04T14:18:15-07:00</lastmod>
   </url>
@@ -31,6 +36,12 @@
   
   <url>
     <loc>https://horeaporutiu.github.io/tutorials/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://horeaporutiu.github.io/tutorials/</loc>
+    <lastmod>2017-05-04T14:18:15-07:00</lastmod>
     <priority>0</priority>
   </url>
   

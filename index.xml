@@ -21,6 +21,15 @@
     </item>
     
     <item>
+      <title>My first Tutorial</title>
+      <link>https://horeaporutiu.github.io/tutorials/tutor/</link>
+      <pubDate>Thu, 04 May 2017 14:18:15 -0700</pubDate>
+      
+      <guid>https://horeaporutiu.github.io/tutorials/tutor/</guid>
+      <description>Coming Soon!</description>
+    </item>
+    
+    <item>
       <title>Run Node.js server with Bluemix</title>
       <link>https://horeaporutiu.github.io/post/bluemix-hello-nodejs/</link>
       <pubDate>Thu, 04 May 2017 14:18:15 -0700</pubDate>
