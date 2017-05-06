@@ -6,10 +6,20 @@
     <description>Recent content on Horea Porutiu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 04 May 2017 14:18:15 -0700</lastBuildDate>
+    <lastBuildDate>Fri, 05 May 2017 14:18:15 -0700</lastBuildDate>
     
 	<atom:link href="https://horeaporutiu.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>OpenWhisk Actions &amp; API calls</title>
+      <link>https://horeaporutiu.github.io/post/openwhiskactions/</link>
+      <pubDate>Fri, 05 May 2017 14:18:15 -0700</pubDate>
+      
+      <guid>https://horeaporutiu.github.io/post/openwhiskactions/</guid>
+      <description>In this blog, I will go over some of the basics of OpenWhisk and go over a simple example of an action that will load weather for your area. I assume you already have a Bluemix account. If you do not, go here to get one. 
+Initial Setup 1) Setup OpenWhisk CLI (Command Line Interface). If you&amp;rsquo;ve verified your setup from the setup above, you should be good to go!</description>
+    </item>
     
     <item>
       <title>About Me</title>
@@ -27,16 +37,6 @@
       
       <guid>https://horeaporutiu.github.io/tutorials/tutor/</guid>
       <description>Coming Soon!</description>
-    </item>
-    
-    <item>
-      <title>OpenWhisk Actions &amp; API calls</title>
-      <link>https://horeaporutiu.github.io/post/openwhiskactions/</link>
-      <pubDate>Thu, 04 May 2017 14:18:15 -0700</pubDate>
-      
-      <guid>https://horeaporutiu.github.io/post/openwhiskactions/</guid>
-      <description>In this blog, I will go over some of the basics of OpenWhisk and go over a simple example of an action that will load weather for your area. I assume you already have a Bluemix account. If you do not, go here to get one. 
-Initial Setup 1) Setup OpenWhisk CLI (Command Line Interface). If you&amp;rsquo;ve verified your setup from the setup above, you should be good to go!</description>
     </item>
     
     <item>
