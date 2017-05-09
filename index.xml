@@ -45,7 +45,7 @@ Initial Setup 1) Setup OpenWhisk CLI (Command Line Interface). If you&amp;rsquo;
       <pubDate>Thu, 04 May 2017 14:18:15 -0700</pubDate>
       
       <guid>https://horeaporutiu.github.io/post/bluemix-hello-nodejs/</guid>
-      <description>Let&amp;rsquo;s learn how to build that Node.js web-server using Bluemix! Before we start, you will need to do a few things.
+      <description>Let&amp;rsquo;s learn how to build that Node.js web-server using Bluemix! If you prefer video tutorials, please watch my video on this topic. Before we start, you will need to do a few things.
  Initial Setup 1) Get a Bluemix Account
 2) Install Homebrew if you have a mac. Otherwise, skip this step.
 3) Install npm/node for Mac or npm/node for Windows
