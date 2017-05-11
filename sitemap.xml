@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://horeaporutiu.github.io/post/hugoblog/</loc>
+    <lastmod>2017-05-10T14:18:15-07:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://horeaporutiu.github.io/tutorials/hugoblog/</loc>
     <lastmod>2017-05-10T14:18:15-07:00</lastmod>
   </url>
@@ -14,11 +19,6 @@
   
   <url>
     <loc>https://horeaporutiu.github.io/about/</loc>
-    <lastmod>2017-05-04T14:18:15-07:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://horeaporutiu.github.io/post/hugoblog/</loc>
     <lastmod>2017-05-04T14:18:15-07:00</lastmod>
   </url>
   
@@ -35,7 +35,7 @@
   
   <url>
     <loc>https://horeaporutiu.github.io/post/</loc>
-    <lastmod>2017-05-05T14:18:15-07:00</lastmod>
+    <lastmod>2017-05-10T14:18:15-07:00</lastmod>
     <priority>0</priority>
   </url>
   
