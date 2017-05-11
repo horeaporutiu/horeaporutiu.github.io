@@ -6,7 +6,7 @@
     <description>Recent content in Tutorials on Horea Porutiu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 04 May 2017 14:18:15 -0700</lastBuildDate>
+    <lastBuildDate>Wed, 10 May 2017 14:18:15 -0700</lastBuildDate>
     
 	<atom:link href="https://horeaporutiu.github.io/tutorials/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,7 +14,7 @@
     <item>
       <title>How to: Blog w/ Hugo and Github Pages</title>
       <link>https://horeaporutiu.github.io/tutorials/hugoblog/</link>
-      <pubDate>Thu, 04 May 2017 14:18:15 -0700</pubDate>
+      <pubDate>Wed, 10 May 2017 14:18:15 -0700</pubDate>
       
       <guid>https://horeaporutiu.github.io/tutorials/hugoblog/</guid>
       <description>This tutorial focuses on building exactly this: a Hugo site! If you follow these two videos, you should be able to build your own site and customize it within minutes. Please feel free to ask questions or drop some suggestions below!
