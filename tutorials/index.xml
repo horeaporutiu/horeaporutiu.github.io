@@ -12,12 +12,13 @@
     
     
     <item>
-      <title>My first Tutorial</title>
-      <link>https://horeaporutiu.github.io/tutorials/tutor/</link>
+      <title>How to: Blog w/ Hugo and Github Pages</title>
+      <link>https://horeaporutiu.github.io/tutorials/hugoblog/</link>
       <pubDate>Thu, 04 May 2017 14:18:15 -0700</pubDate>
       
-      <guid>https://horeaporutiu.github.io/tutorials/tutor/</guid>
-      <description>Coming Soon!</description>
+      <guid>https://horeaporutiu.github.io/tutorials/hugoblog/</guid>
+      <description>This tutorial focuses on building exactly this: a Hugo site! If you follow these two videos, you should be able to build your own site and customize it within minutes. Please feel free to ask questions or drop some suggestions below!
+ Setup Your Blog   Customize!   Enjoy!</description>
     </item>
     
   </channel>
