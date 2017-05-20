@@ -6,10 +6,19 @@
     <description>Recent content in Posts on Horea Porutiu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 10 May 2017 14:18:15 -0700</lastBuildDate>
+    <lastBuildDate>Fri, 19 May 2017 14:18:15 -0700</lastBuildDate>
     
 	<atom:link href="https://horeaporutiu.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Connecting Watson &amp;&amp; Kitura</title>
+      <link>https://horeaporutiu.github.io/post/connectingwatsonkitura/</link>
+      <pubDate>Fri, 19 May 2017 14:18:15 -0700</pubDate>
+      
+      <guid>https://horeaporutiu.github.io/post/connectingwatsonkitura/</guid>
+      <description>Hey guys! I haven&amp;rsquo;t written in a bit since I was exploring some cool technologies. In the past week, i&amp;rsquo;ve been hard at work learning about Kitura. In this blog, I will explain what I have learned, and help you get started learning Kitura and integrating your apps with Watson. Below is an iOS app that integrates text to speech and language translation services from watson. The source code to get started can be found here.</description>
+    </item>
     
     <item>
       <title>How to: Blog w/ Hugo and Github Pages</title>
