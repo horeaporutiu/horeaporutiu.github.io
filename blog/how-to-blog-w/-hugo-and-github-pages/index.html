@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+<meta name="description" content="This is Horea&#39;s blog to discuss emerging tech.">
+
+<base href="https://horeaporutiu.github.io/">
+<title>
+
+
+     How to: Blog w/ Hugo and Github Pages 
+
+</title>
+<link rel="canonical" href="https://horeaporutiu.github.io/blog/how-to-blog-w/-hugo-and-github-pages/">
+
+
+
+
+
+
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/styles/default.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Ubuntu+Mono:400,400i,700,700i|Raleway:500|Work+Sans">
+
+
+
+    
+    <link rel="stylesheet" href="https://horeaporutiu.github.io/css/light-style.css?t=1495494182">
+    
+
+
+
+
+<link rel="shortcut icon"
+
+    href="https://horeaporutiu.github.io/img/favicon.ico"
+
+>
+
+
+
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-98632670-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+
+
+
+
+
+</head>
+
+<body lang="en">
+  
+
+<div class="section" id="top">
+
+    <div class="container hero  fade-in one ">
+    <h1 class="bold-title is-1">Horea's Blog</h1>
+    </div>
+
+
+<div class="section  fade-in two ">
+
+    <div class="container">
+    <hr>
+<nav class="nav nav-center">
+    <span id="nav-toggle" class="nav-toggle"  onclick="document.getElementById('nav-menu').classList.toggle('is-active');">
+      <span></span>
+      <span></span>
+      <span></span>
+    </span>
+    <div id="nav-menu" class="nav-left nav-menu">
+      <span class="nav-item">
+        <a href="https://horeaporutiu.github.io/">Main</a>
+      </span>
+      <span class="nav-item">
+        <a href="https://horeaporutiu.github.io/#about">About</a> 
+      </span>
+    
+    
+      <span class="nav-item">
+        <a href="https://horeaporutiu.github.io/blog">Back to blog</a>
+      </span> 
+    
+      <span class="nav-item">
+        <a href="https://horeaporutiu.github.io/#contact">Contact</a>
+      </span>
+    
+      <span class="nav-item">
+        <a href="https://horeaporutiu.github.io/index.xml"><i class="fa fa-rss"></i></a>
+      </span>
+    
+    </div>
+</nav>
+<hr>
+    </div>
+
+    <div class="container  fade-in two ">
+        <h2 class="title is-1 top-pad strong-post-title"><a href="https://horeaporutiu.github.io/blog/how-to-blog-w/-hugo-and-github-pages/">How to: Blog w/ Hugo and Github Pages</a></h2>
+            <div class="post-data">
+                May 10, 2017 |
+                1 minute read
+            </div>
+
+            
+                <div class="blog-share">
+                Share this:
+                <a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=Read%20How%20to%3a%20Blog%20w%2f%20Hugo%20and%20Github%20Pages%20https%3a%2f%2fhoreaporutiu.github.io%2fblog%2fhow-to-blog-w%2f-hugo-and-github-pages%2f"
+                onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                <i class="fa fa-twitter"></i>
+                <span class="hidden">Twitter</span>
+                </a>
+                <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fhoreaporutiu.github.io%2fblog%2fhow-to-blog-w%2f-hugo-and-github-pages%2f"
+                onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                <i class="fa fa-facebook"></i>
+                <span class="hidden">Facebook</span>
+                </a>
+                <a class="icon-pinterest" href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fhoreaporutiu.github.io%2fblog%2fhow-to-blog-w%2f-hugo-and-github-pages%2f&amp;description=How%20to%3a%20Blog%20w%2f%20Hugo%20and%20Github%20Pages"
+                onclick="window.open(this.href, 'pinterest-share','width=580,height=296');return false;">
+                <i class="fa fa-pinterest"></i>
+                <span class="hidden">Pinterest</span>
+                </a>
+                <a class="icon-google-plus" href="https://plus.google.com/share?url=https%3a%2f%2fhoreaporutiu.github.io%2fblog%2fhow-to-blog-w%2f-hugo-and-github-pages%2f"
+                onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                <i class="fa fa-linkedin"></i>
+                <span class="hidden">Google+</span>
+                </a>
+                </div>
+            
+
+    </div>
+
+    <div class="container markdown  fade-in two  top-pad">
+        <p>This tutorial focuses on building exactly this: a Hugo site! If you follow these two videos,
+you should be able to build your own site and customize it within minutes. Please feel free
+to ask questions or drop some suggestions below!</p>
+
+<hr>
+
+<h4 id="setup">Setup Your Blog</h4>
+
+<div class="scroll-wrapper" id = "youtube"><iframe width="560" height="315"
+src="https://www.youtube.com/embed/oUjk6wpJn7I" allowfullscreen></iframe></div>
+
+<hr>
+
+<h4 id="setup">Customize!</h4>
+
+<div class="scroll-wrapper" id = "youtube"><iframe width="560" height="315" src="https://www.youtube.com/embed/4W9sVoVYMLo" allowfullscreen></iframe></div>
+
+<hr>
+
+<p>Enjoy!</p>
+
+    </div>
+
+    <div class="disqus">
+        <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'https-horeaporutiu-github-io-1';
+    var disqus_identifier = 'https:\/\/horeaporutiu.github.io\/blog\/how-to-blog-w\/-hugo-and-github-pages\/';
+    var disqus_title = 'How to: Blog w\/ Hugo and Github Pages';
+    var disqus_url = 'https:\/\/horeaporutiu.github.io\/blog\/how-to-blog-w\/-hugo-and-github-pages\/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </div>
+
+<div class="container has-text-centered top-pad">
+<hr>
+<a href="https://horeaporutiu.github.io/blog/how-to-blog-w/-hugo-and-github-pages/#top"><i class="fa fa-arrow-up"></i></a>
+<hr>
+</div>
+
+<div class="section" id="footer">
+    <div class="container has-text-centered">
+        
+            Horea Porutiu © 2017. All rights reserved.
+        
+    </div>
+</div>
+</div>
+</div>
+
+
+<script>
+$('a[href^="https:\/\/horeaporutiu.github.io\/blog\/how-to-blog-w\/-hugo-and-github-pages\/#"]').click(function(e) {
+    e.preventDefault();
+    var target = this.hash;
+    $('html, body').animate({
+    scrollTop: $(target).offset().top
+    }, 500);
+    return false;
+})
+</script>

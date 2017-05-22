@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+<meta name="description" content="This is Horea&#39;s blog to discuss emerging tech.">
+
+<base href="https://horeaporutiu.github.io/">
+<title>
+
+
+     Connecting Watson &amp;&amp; Kitura 
+
+</title>
+<link rel="canonical" href="https://horeaporutiu.github.io/blog/connecting-watson--kitura/">
+
+
+
+
+
+
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/styles/default.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Ubuntu+Mono:400,400i,700,700i|Raleway:500|Work+Sans">
+
+
+
+    
+    <link rel="stylesheet" href="https://horeaporutiu.github.io/css/light-style.css?t=1495494182">
+    
+
+
+
+
+<link rel="shortcut icon"
+
+    href="https://horeaporutiu.github.io/img/favicon.ico"
+
+>
+
+
+
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-98632670-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+
+
+
+
+
+</head>
+
+<body lang="en">
+  
+
+<div class="section" id="top">
+
+    <div class="container hero  fade-in one ">
+    <h1 class="bold-title is-1">Horea's Blog</h1>
+    </div>
+
+
+<div class="section  fade-in two ">
+
+    <div class="container">
+    <hr>
+<nav class="nav nav-center">
+    <span id="nav-toggle" class="nav-toggle"  onclick="document.getElementById('nav-menu').classList.toggle('is-active');">
+      <span></span>
+      <span></span>
+      <span></span>
+    </span>
+    <div id="nav-menu" class="nav-left nav-menu">
+      <span class="nav-item">
+        <a href="https://horeaporutiu.github.io/">Main</a>
+      </span>
+      <span class="nav-item">
+        <a href="https://horeaporutiu.github.io/#about">About</a> 
+      </span>
+    
+    
+      <span class="nav-item">
+        <a href="https://horeaporutiu.github.io/blog">Back to blog</a>
+      </span> 
+    
+      <span class="nav-item">
+        <a href="https://horeaporutiu.github.io/#contact">Contact</a>
+      </span>
+    
+      <span class="nav-item">
+        <a href="https://horeaporutiu.github.io/index.xml"><i class="fa fa-rss"></i></a>
+      </span>
+    
+    </div>
+</nav>
+<hr>
+    </div>
+
+    <div class="container  fade-in two ">
+        <h2 class="title is-1 top-pad strong-post-title"><a href="https://horeaporutiu.github.io/blog/connecting-watson--kitura/">Connecting Watson &amp;&amp; Kitura</a></h2>
+            <div class="post-data">
+                May 19, 2017 |
+                4 minutes read
+            </div>
+
+            
+                <div class="blog-share">
+                Share this:
+                <a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=Read%20Connecting%20Watson%20%26%26%20Kitura%20https%3a%2f%2fhoreaporutiu.github.io%2fblog%2fconnecting-watson--kitura%2f"
+                onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                <i class="fa fa-twitter"></i>
+                <span class="hidden">Twitter</span>
+                </a>
+                <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fhoreaporutiu.github.io%2fblog%2fconnecting-watson--kitura%2f"
+                onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                <i class="fa fa-facebook"></i>
+                <span class="hidden">Facebook</span>
+                </a>
+                <a class="icon-pinterest" href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fhoreaporutiu.github.io%2fblog%2fconnecting-watson--kitura%2f&amp;description=Connecting%20Watson%20%26%26%20Kitura"
+                onclick="window.open(this.href, 'pinterest-share','width=580,height=296');return false;">
+                <i class="fa fa-pinterest"></i>
+                <span class="hidden">Pinterest</span>
+                </a>
+                <a class="icon-google-plus" href="https://plus.google.com/share?url=https%3a%2f%2fhoreaporutiu.github.io%2fblog%2fconnecting-watson--kitura%2f"
+                onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                <i class="fa fa-linkedin"></i>
+                <span class="hidden">Google+</span>
+                </a>
+                </div>
+            
+
+    </div>
+
+    <div class="container markdown  fade-in two  top-pad">
+        <p>Hey guys! I haven&rsquo;t written in a bit since I was exploring some cool technologies.
+In the past week, i&rsquo;ve been hard at work learning about Kitura.
+In this blog, I will explain what I have learned, and help you get started learning Kitura
+and integrating your apps with Watson. Below is an iOS app that integrates text to speech
+and language translation services from watson. The source code to get started can be found
+<a href="https://github.com/watson-developer-cloud/text-to-speech-swift">here</a>. If you want
+to check out the source code of the app I made in the video below you can find it
+<a href="https://github.com/horeaporutiu/text-to-speech-swift">here</a>. I simply added
+a language translation service on top of the existing text to speech service.</p>
+
+<div class="scroll-wrapper" id = "youtube"><iframe width="560" height="315"
+src="https://www.youtube.com/embed/pN4BrtXp7lQ" allowfullscreen></iframe></div>
+
+<p>Below is the site that I launched with Kitura.</p>
+
+<div class="scroll-wrapper" id = "youtube"><iframe width="560" height="315"
+src="https://www.youtube.com/embed/MKJIhObJLlg" allowfullscreen></iframe></div>
+
+<p>The site shown above can be found at <a href="https://horeaporutiu.github.io/watsonSpeaks/">https://horeaporutiu.github.io/watsonSpeaks/</a></p>
+
+<hr>
+
+<h4 id="setup">Getting Started</h4>
+1) For macOS, Download and install <a href="https://idmsa.apple.com/IDMSWebAuth/login?appIdKey=891bd3417a7776362562d2197f89480a8547b108fd934911bcbea0110d07f757&path=%2Fdownload%2F&rv=1">
+Xcode 8.3</a>. For Ubuntu Linux, follow  <a href="http://www.kitura.io/en/starter/settingup.html"> These steps</a>
+2) Create a new project directory
+
+<pre><code class="language-toml">$ mkdir kituraProj
+$ cd kituraProj
+</code></pre>
+
+3) Create a new Swift Project using the Swift Package Manager
+<pre><code class="language-toml">$ swift package init --type executable
+</code></pre>
+<br>
+<h4 id="setup">Adding Kitura to Swift Project</h4>
+
+<p>Next we have to add dependencies and let Swift download all of the
+packages it needs to run the Kitura server. To do this, we have to add some
+lines in our <b>Package.swift</b> file.</p>
+
+<pre><code class="language-toml">
+import PackageDescription
+
+let package = Package(
+    name: "myFirstProject",
+    dependencies: [
+        .Package(url: "https://github.com/IBM-Swift/Kitura.git", majorVersion: 1, minor: 7),
+        .Package(url: "https://github.com/IBM-Swift/HeliumLogger.git", majorVersion: 1, minor: 7)
+    ])
+
+</code></pre>
+<br>
+<h4 id="setup">Running Kitura Server</h4>
+
+Next, we have to specify where we want to have our server.
+Change the <b>Sources/main.swift</b> file to look like this:
+
+<pre><code class="language-toml">import Kitura
+
+// Create a new router
+let router = Router()
+
+// Handle HTTP GET requests to /
+router.get("/") {
+    request, response, next in
+    response.send("Hello, World!")
+    next()
+}
+
+// Add an HTTP server and connect it to the router
+Kitura.addHTTPServer(onPort: 8080, with: router)
+
+// Start the Kitura runloop (this call never returns)
+Kitura.run()
+</code></pre>
+
+<p>Compile the app.</p>
+
+<pre><code class="language-toml">$ swift build
+</code></pre>
+
+<p>Create an xcode app.
+<pre><code class="language-toml">$ swift package generate-xcodeproj
+</code></pre></p>
+
+<p>Open the project in Xcode.</p>
+
+<pre><code class="language-toml">$ open kituraProj.xcodeproj
+</code></pre>
+
+<p>Change scheme to be as shown below.
+<img src="../../img/manageScheme.png" alt="Mountain View" style="width:600px;height:330px;"></p>
+
+<p>Run the project. Product -&gt; Run. Allow incoming connections.
+<br>
+Open your browser at <a href="http://localhost:8080">http://localhost:8080</a>
+<hr>
+<br>
+<h4 id="setup">Hosting Static Content</h4></p>
+
+<p>To host simple static sites, you can simply add this line in your <b>main.swift</b> file. This will
+look for any files in the &lsquo;public&rsquo; directory. Put all of your styling files such as CSS and HTML in that directory.</p>
+
+<pre><code class="language-toml">$ router.all("/", middleware: StaticFileServer())
+</code></pre>
+
+<p>Then create your public directory, add a simple index.html file in there, and add some code.</p>
+
+<pre><code class="language-toml">$ mkdir public
+$ touch index.html
+</code></pre>
+
+<p>In the index file, add a basic skeleton. You can find one here: <a href="http://htmlshell.com/">http://htmlshell.com/</a>
+Run the app again, Open your browser at <a href="http://localhost:8080">http://localhost:8080</a> and your new site should be there!
+<hr>
+<br>
+<h4 id="setup">Connecting Watson and Kitura</h4></p>
+
+<p>To connect to watson, first clone a sample app.</p>
+
+<pre><code class="language-toml">$ git clone https://github.com/watson-developer-cloud/text-to-speech-swift.git
+</code></pre>
+
+<p>Follow the instructions <a href="https://github.com/watson-developer-cloud/text-to-speech-swift">https://github.com/watson-developer-cloud/text-to-speech-swift</a> to get started.
+Once you have your app working, we want to have the server side code and the client side code different
+directories. One directory should be your kituraProj(server side), and the other is watsonApp.
+<hr>
+<br>
+<h4 id="setup">Watson Translates</h4>
+<br></p>
+
+<p>To add Swift SDK frameworks, we first need to add the frameworks in our linked frameworks.
+Watch the video below to learn how to add the frameworks by going into our Carthage directory
+and opening the correct file. The last step in the video shows adding the
+&ldquo;Run Scrip Phase&rdquo; in the &ldquo;Build Phases&rdquo; section of our app.</p>
+
+<div class="scroll-wrapper" id = "youtube"><iframe width="560" height="315"
+src="https://www.youtube.com/embed/Y0jBojtzUk0" allowfullscreen></iframe></div>
+
+<p><br>
+<hr></p>
+
+<p>Right under the &ldquo;Run Script&rdquo;, you will see Input Files. Click on the &ldquo;+&rdquo; icon, and add the following lines:
+<pre><code class="language-toml">$(SRCROOT)/Carthage/Build/iOS/LanguageTranslatorV2.framework
+</code></pre></p>
+
+<p>For the last step, we simply need to open the plist.info file -&gt; view as source code. Then add these lines
+from <a href="https://github.com/watson-developer-cloud/swift-sdk/blob/master/docs/quickstart.md#add-exception-for-app-transport-security">here</a>.</p>
+
+<p>We are ready to add the language translation code! Let&rsquo;s do it!</p>
+
+<p>Add this code to your view controller, and you are all set! Enjoy!
+<pre><code class="language-toml">import LanguageTranslatorV2</p>
+
+<p>let username = &ldquo;your-username-here&rdquo;
+let password = &ldquo;your-password-here&rdquo;
+let languageTranslator = LanguageTranslator(username: username, password: password)</p>
+
+<p>// set the serviceURL property to use the legacy Language Translation service
+// languageTranslator.serviceURL = &ldquo;<a href="https://gateway.watsonplatform.net/language-translation/api&quot;">https://gateway.watsonplatform.net/language-translation/api&quot;</a></p>
+
+<p>let failure = { (error: Error) in print(error) }
+languageTranslator.translate(&ldquo;Hello&rdquo;, from: &ldquo;en&rdquo;, to: &ldquo;es&rdquo;, failure: failure) {
+    translation in
+    print(translation)
+}
+</code></pre>
+<br>
+<h4 id="">Conclusion</h4></p>
+
+<p>Building an end-to-end app with Swift and Kitura has never been easier. Also,
+integrating with Watson is relatively easy if you follow these guidelines. Find out
+more about kitura <a href="http://www.kitura.io/">here</a>. Until next time!</p>
+
+    </div>
+
+    <div class="disqus">
+        <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'https-horeaporutiu-github-io-1';
+    var disqus_identifier = 'https:\/\/horeaporutiu.github.io\/blog\/connecting-watson--kitura\/';
+    var disqus_title = 'Connecting Watson \x26\x26 Kitura';
+    var disqus_url = 'https:\/\/horeaporutiu.github.io\/blog\/connecting-watson--kitura\/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </div>
+
+<div class="container has-text-centered top-pad">
+<hr>
+<a href="https://horeaporutiu.github.io/blog/connecting-watson--kitura/#top"><i class="fa fa-arrow-up"></i></a>
+<hr>
+</div>
+
+<div class="section" id="footer">
+    <div class="container has-text-centered">
+        
+            Horea Porutiu © 2017. All rights reserved.
+        
+    </div>
+</div>
+</div>
+</div>
+
+
+<script>
+$('a[href^="https:\/\/horeaporutiu.github.io\/blog\/connecting-watson--kitura\/#"]').click(function(e) {
+    e.preventDefault();
+    var target = this.hash;
+    $('html, body').animate({
+    scrollTop: $(target).offset().top
+    }, 500);
+    return false;
+})
+</script>

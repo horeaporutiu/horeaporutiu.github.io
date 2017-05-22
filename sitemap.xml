@@ -3,8 +3,18 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://horeaporutiu.github.io/blog/connecting-watson--kitura/</loc>
+    <lastmod>2017-05-19T14:18:15-07:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://horeaporutiu.github.io/post/connectingwatsonkitura/</loc>
     <lastmod>2017-05-19T14:18:15-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://horeaporutiu.github.io/blog/how-to-blog-w/-hugo-and-github-pages/</loc>
+    <lastmod>2017-05-10T14:18:15-07:00</lastmod>
   </url>
   
   <url>
@@ -18,18 +28,44 @@
   </url>
   
   <url>
+    <loc>https://horeaporutiu.github.io/blog/openwhisk-actions--api-calls/</loc>
+    <lastmod>2017-05-05T14:18:15-07:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://horeaporutiu.github.io/post/openwhiskactions/</loc>
     <lastmod>2017-05-05T14:18:15-07:00</lastmod>
   </url>
   
   <url>
-    <loc>https://horeaporutiu.github.io/about/</loc>
+    <loc>https://horeaporutiu.github.io/something/</loc>
+    <lastmod>2017-05-04T14:18:15-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://horeaporutiu.github.io/blog/run-node.js-server-with-bluemix/</loc>
     <lastmod>2017-05-04T14:18:15-07:00</lastmod>
   </url>
   
   <url>
     <loc>https://horeaporutiu.github.io/post/bluemix-hello-nodejs/</loc>
     <lastmod>2017-05-04T14:18:15-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://horeaporutiu.github.io/about/</loc>
+    <lastmod>2017-03-09T13:19:25+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://horeaporutiu.github.io/blog/</loc>
+    <lastmod>2017-05-19T14:18:15-07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://horeaporutiu.github.io/categories/</loc>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -46,11 +82,6 @@
   
   <url>
     <loc>https://horeaporutiu.github.io/tags/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://horeaporutiu.github.io/tutorials/</loc>
     <priority>0</priority>
   </url>
   
