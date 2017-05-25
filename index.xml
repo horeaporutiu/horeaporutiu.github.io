@@ -21,40 +21,11 @@
     </item>
     
     <item>
-      <title>Connecting Watson &amp;&amp; Kitura</title>
-      <link>https://horeaporutiu.github.io/post/connectingwatsonkitura/</link>
-      <pubDate>Fri, 19 May 2017 14:18:15 -0700</pubDate>
-      
-      <guid>https://horeaporutiu.github.io/post/connectingwatsonkitura/</guid>
-      <description>Hey guys! I haven&amp;rsquo;t written in a bit since I was exploring some cool technologies. In the past week, i&amp;rsquo;ve been hard at work learning about Kitura. In this blog, I will explain what I have learned, and help you get started learning Kitura and integrating your apps with Watson. Below is an iOS app that integrates text to speech and language translation services from watson. The source code to get started can be found here.</description>
-    </item>
-    
-    <item>
       <title>How to: Blog w/ Hugo and Github Pages</title>
       <link>https://horeaporutiu.github.io/blog/how-to-blog-w/-hugo-and-github-pages/</link>
       <pubDate>Wed, 10 May 2017 14:18:15 -0700</pubDate>
       
       <guid>https://horeaporutiu.github.io/blog/how-to-blog-w/-hugo-and-github-pages/</guid>
-      <description>This tutorial focuses on building exactly this: a Hugo site! If you follow these two videos, you should be able to build your own site and customize it within minutes. Please feel free to ask questions or drop some suggestions below!
- Setup Your Blog   Customize!   Enjoy!</description>
-    </item>
-    
-    <item>
-      <title>How to: Blog w/ Hugo and Github Pages</title>
-      <link>https://horeaporutiu.github.io/post/hugoblog/</link>
-      <pubDate>Wed, 10 May 2017 14:18:15 -0700</pubDate>
-      
-      <guid>https://horeaporutiu.github.io/post/hugoblog/</guid>
-      <description>This tutorial focuses on building exactly this: a Hugo site! If you follow these two videos, you should be able to build your own site and customize it within minutes. Please feel free to ask questions or drop some suggestions below!
- Setup Your Blog   Customize!   Enjoy!</description>
-    </item>
-    
-    <item>
-      <title>How to: Blog w/ Hugo and Github Pages</title>
-      <link>https://horeaporutiu.github.io/tutorials/hugoblog/</link>
-      <pubDate>Wed, 10 May 2017 14:18:15 -0700</pubDate>
-      
-      <guid>https://horeaporutiu.github.io/tutorials/hugoblog/</guid>
       <description>This tutorial focuses on building exactly this: a Hugo site! If you follow these two videos, you should be able to build your own site and customize it within minutes. Please feel free to ask questions or drop some suggestions below!
  Setup Your Blog   Customize!   Enjoy!</description>
     </item>
@@ -70,44 +41,11 @@ Initial Setup 1) Setup OpenWhisk CLI (Command Line Interface). If you&amp;rsquo;
     </item>
     
     <item>
-      <title>OpenWhisk Actions &amp; API calls</title>
-      <link>https://horeaporutiu.github.io/post/openwhiskactions/</link>
-      <pubDate>Fri, 05 May 2017 14:18:15 -0700</pubDate>
-      
-      <guid>https://horeaporutiu.github.io/post/openwhiskactions/</guid>
-      <description>In this blog, I will go over some of the basics of OpenWhisk and go over a simple example of an action that will load weather for your area. I assume you already have a Bluemix account. If you do not, go here to get one. 
-Initial Setup 1) Setup OpenWhisk CLI (Command Line Interface). If you&amp;rsquo;ve verified your setup from the setup above, you should be good to go!</description>
-    </item>
-    
-    <item>
-      <title>About Me</title>
-      <link>https://horeaporutiu.github.io/something/</link>
-      <pubDate>Thu, 04 May 2017 14:18:15 -0700</pubDate>
-      
-      <guid>https://horeaporutiu.github.io/something/</guid>
-      <description>I enjoy writing code and being outside. I&amp;rsquo;m currently working as a Developer Advocate for IBM, promoting IBM&amp;rsquo;s Platform-As-A-Service Bluemix. I graduated from UC San Diego in March 2017 with a double major in Computer &amp;amp; Management Science. I played tennis for the UC San Diego Men&amp;rsquo;s Tennis Team and competed in over 140 matches.When I was not on the court, I was in the classroom or at office hours trying to excel in my classes.</description>
-    </item>
-    
-    <item>
       <title>Run Node.js server with Bluemix</title>
       <link>https://horeaporutiu.github.io/blog/run-node.js-server-with-bluemix/</link>
       <pubDate>Thu, 04 May 2017 14:18:15 -0700</pubDate>
       
       <guid>https://horeaporutiu.github.io/blog/run-node.js-server-with-bluemix/</guid>
-      <description>Let&amp;rsquo;s learn how to build that Node.js web-server using Bluemix! If you prefer video tutorials, please watch my video on this topic. Before we start, you will need to do a few things.
- Initial Setup 1) Get a Bluemix Account
-2) Install Homebrew if you have a mac. Otherwise, skip this step.
-3) Install npm/node for Mac or npm/node for Windows
-4) Install cf command line tool
-Starter Code Open up terminal, and use the following git commands: $ git clone https://github.</description>
-    </item>
-    
-    <item>
-      <title>Run Node.js server with Bluemix</title>
-      <link>https://horeaporutiu.github.io/post/bluemix-hello-nodejs/</link>
-      <pubDate>Thu, 04 May 2017 14:18:15 -0700</pubDate>
-      
-      <guid>https://horeaporutiu.github.io/post/bluemix-hello-nodejs/</guid>
       <description>Let&amp;rsquo;s learn how to build that Node.js web-server using Bluemix! If you prefer video tutorials, please watch my video on this topic. Before we start, you will need to do a few things.
  Initial Setup 1) Get a Bluemix Account
 2) Install Homebrew if you have a mac. Otherwise, skip this step.
