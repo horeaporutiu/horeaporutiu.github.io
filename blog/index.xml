@@ -6,10 +6,19 @@
     <description>Recent content in Blogs on Horea Porutiu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 19 May 2017 14:18:15 -0700</lastBuildDate>
+    <lastBuildDate>Thu, 25 May 2017 14:18:15 -0700</lastBuildDate>
     
 	<atom:link href="https://horeaporutiu.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Intro to Augmented Reality</title>
+      <link>https://horeaporutiu.github.io/blog/intro-to-augmented-reality/</link>
+      <pubDate>Thu, 25 May 2017 14:18:15 -0700</pubDate>
+      
+      <guid>https://horeaporutiu.github.io/blog/intro-to-augmented-reality/</guid>
+      <description>So first and foremost I want to make a shoutout to Jacob W. Green, who wrote this great post about getting started with Augmented Reality. It&amp;rsquo;s extremely easy to follow, and very informative. His post uses augmented reality to overlay an image of an author over the cover of the corresponding book. Now this may or may not sound appealing to you, but I am extremely excited to be going to AWE (Augmented World Expo) next week, and what better way to get familiar with AR than by building a project.</description>
+    </item>
     
     <item>
       <title>Connecting Watson &amp;&amp; Kitura</title>
