@@ -6,10 +6,19 @@
     <description>Recent content on Horea Porutiu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 05 Jun 2017 14:18:15 -0700</lastBuildDate>
+    <lastBuildDate>Wed, 14 Jun 2017 16:14:34 -0700</lastBuildDate>
     
 	<atom:link href="https://horeaporutiu.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Two Approaches to API Calls with Server-Side Swift</title>
+      <link>https://horeaporutiu.github.io/blog/two-approaches-to-api-calls-with-server-side-swift/</link>
+      <pubDate>Wed, 14 Jun 2017 16:14:34 -0700</pubDate>
+      
+      <guid>https://horeaporutiu.github.io/blog/two-approaches-to-api-calls-with-server-side-swift/</guid>
+      <description>In this blog, i&amp;rsquo;m going to go over how to make an HTTP Post Request using Kitura (A Server-Side Swift Framework). First i&amp;rsquo;ll be making Post Requests using URLSession, and then using KituraNet. If you are not sure how to start up a Kitura project, go here. If you want to see another implementation of a HTTP Post Request with KituraNet, Rob Allen does a great job explaining his code.</description>
+    </item>
     
     <item>
       <title>Day 2 at Augmented World Expo</title>
