@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+<meta name="description" content="A blog to discuss emerging tech.">
+
+<base href="https://horeaporutiu.github.io/">
+<title>
+
+
+     Two Approaches to API Calls with Server-Side Swift 
+
+</title>
+<link rel="canonical" href="https://horeaporutiu.github.io/blog/two-approaches-to-api-calls-with-server-side-swift/">
+
+
+
+
+
+
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/styles/default.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Ubuntu+Mono:400,400i,700,700i|Raleway:500|Work+Sans">
+
+
+
+    
+    <link rel="stylesheet" href="https://horeaporutiu.github.io/css/light-style.css?t=1498755766">
+    
+
+
+
+
+<link rel="shortcut icon"
+
+    href="https://horeaporutiu.github.io/img/favicon.ico"
+
+>
+
+
+
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-98632670-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+
+
+
+
+
+</head>
+
+<body lang="en">
+  
+
+<div class="section" id="top">
+
+    <div class="container hero  fade-in one ">
+    <h1 class="bold-title is-1">Horea's Blog</h1>
+    </div>
+
+
+<div class="section  fade-in two ">
+
+    <div class="container">
+    <hr>
+<nav class="nav nav-center">
+    <span id="nav-toggle" class="nav-toggle"  onclick="document.getElementById('nav-menu').classList.toggle('is-active');">
+      <span></span>
+      <span></span>
+      <span></span>
+    </span>
+    <div id="nav-menu" class="nav-left nav-menu">
+      <span class="nav-item">
+        <a href="https://horeaporutiu.github.io/">Main</a>
+      </span>
+      <span class="nav-item">
+        <a href="https://horeaporutiu.github.io/#about">About</a> 
+      </span>
+    
+    
+      <span class="nav-item">
+        <a href="https://horeaporutiu.github.io/#blog">Back to blog</a> 
+      </span>
+    
+      <span class="nav-item">
+        <a href="https://horeaporutiu.github.io/#contact">Contact</a>
+      </span>
+    
+      <span class="nav-item">
+        <a href="https://horeaporutiu.github.io/index.xml"><i class="fa fa-rss"></i></a>
+      </span>
+    
+    </div>
+</nav>
+<hr>
+    </div>
+
+    <div class="container  fade-in two ">
+        <h2 class="title is-1 top-pad strong-post-title"><a href="https://horeaporutiu.github.io/blog/two-approaches-to-api-calls-with-server-side-swift/">Two Approaches to API Calls with Server-Side Swift</a></h2>
+            <div class="post-data">
+                Jun 14, 2017 |
+                6 minutes read
+            </div>
+
+            
+                <div class="blog-share">
+                Share this:
+                <a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=Read%20Two%20Approaches%20to%20API%20Calls%20with%20Server-Side%20Swift%20https%3a%2f%2fhoreaporutiu.github.io%2fblog%2ftwo-approaches-to-api-calls-with-server-side-swift%2f"
+                onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                <i class="fa fa-twitter"></i>
+                <span class="hidden">Twitter</span>
+                </a>
+                <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fhoreaporutiu.github.io%2fblog%2ftwo-approaches-to-api-calls-with-server-side-swift%2f"
+                onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                <i class="fa fa-facebook"></i>
+                <span class="hidden">Facebook</span>
+                </a>
+                <a class="icon-pinterest" href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fhoreaporutiu.github.io%2fblog%2ftwo-approaches-to-api-calls-with-server-side-swift%2f&amp;description=Two%20Approaches%20to%20API%20Calls%20with%20Server-Side%20Swift"
+                onclick="window.open(this.href, 'pinterest-share','width=580,height=296');return false;">
+                <i class="fa fa-pinterest"></i>
+                <span class="hidden">Pinterest</span>
+                </a>
+                <a class="icon-google-plus" href="https://plus.google.com/share?url=https%3a%2f%2fhoreaporutiu.github.io%2fblog%2ftwo-approaches-to-api-calls-with-server-side-swift%2f"
+                onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                <i class="fa fa-linkedin"></i>
+                <span class="hidden">Google+</span>
+                </a>
+                </div>
+            
+
+    </div>
+
+    <div class="container markdown  fade-in two  top-pad">
+        <p>In this blog, i&rsquo;m going to go over how to make an HTTP Post Request using
+Kitura (A Server-Side Swift Framework). First i&rsquo;ll be making Post Requests using
+URLSession, and then using KituraNet. If you are not
+sure how to start up a Kitura project, go
+<a href="http://www.kitura.io/en/starter/gettingstarted.html">here</a>. If you
+want to see another implementation of a HTTP Post Request with KituraNet,
+<a href="https://akrabat.com/posting-data-using-kituranet/">Rob Allen</a>
+does a great job explaining his code.</p>
+
+<p>The completed code for the URLSession Request is as follows:</p>
+
+<pre><code class="language-javascript">import Kitura
+import Foundation
+
+let router = Router()
+router.post(middleware: BodyParser())
+
+var parameters = [String:String]()
+
+router.post(&quot;/players&quot;) { request, res, next in
+
+    //fill with actual data
+    parameters[&quot;tennisPlayer&quot;] = &quot;Rafael Nadal&quot;
+
+    let url = URL(string: &quot;your-url-here&quot;)
+    var request = URLRequest(url: url!)
+    request.httpMethod = &quot;POST&quot;
+    //pass in JSON for http call
+    let httpBody = try? JSONSerialization.data(withJSONObject: parameters, options: [])
+    request.httpBody = httpBody
+    //let server know we are sending and accepting JSON
+    request.addValue(&quot;application/json&quot;, forHTTPHeaderField: &quot;Content-Type&quot;)
+    request.addValue(&quot;application/json&quot;, forHTTPHeaderField: &quot;Accept&quot;)
+
+    //URLSESSION POST REQUEST
+    URLSession.shared.dataTask(with: request) { (data, response, error) in
+        let returnData = String(data: data!, encoding: .utf8) //data to String
+        res.send(returnData!) //send response back
+    }.resume()
+
+}
+//set up Kitura to run on localhost:8080
+Kitura.addHTTPServer(onPort: 8080, with: router)
+Kitura.run()
+</code></pre>
+
+<p><br>
+The completed code for the HTTP Post Request using KituraNet is below:</p>
+
+<pre><code class="language-javascript">import Kitura
+import Foundation
+import SwiftyJSON
+import KituraNet
+
+let router = Router()
+router.post(middleware: BodyParser()) //populates request.body with POST parameters
+var parameters = [String:String]() //needed for API call
+var result: String = &quot;&quot; //stores final JSON
+router.post(&quot;/players&quot;) { request, res, next in
+
+    // change to actual data
+    let dataToSend = [&quot;tennisPlayer&quot;: &quot;Rafael Nadal&quot;]
+    //convert parameters to type data, done with SwiftyJSON
+    let bod = try! JSON(dataToSend).rawData()
+
+    // create the request
+    var options: [ClientRequest.Options] = [
+        .schema(&quot;&quot;),
+        .method(&quot;POST&quot;),
+        .hostname(&quot;your-url-here&quot;)
+    ]
+    //add headers - let server know we are sending and accepting JSON
+    var headers = [String:String]()
+    headers[&quot;Accept&quot;] = &quot;application/json&quot;
+    headers[&quot;Content-Type&quot;] = &quot;application/json&quot;
+    options.append(.headers(headers))
+
+    let request = HTTP.request(options) { response in
+        do {
+          //convert ClientResponse to JSON
+          if let responseStr = try response?.readString() {
+              result = responseStr //result now has final JSON we want
+            }
+            else {
+                result = &quot;err&quot;
+            }
+
+        } catch {
+            print(&quot;Error \(error)&quot;) // error handling here
+        }
+    }
+
+    request.write(from: bod) //needed to convert back into JSON
+    request.end()
+    //send result back to client
+    res.send(result)
+}
+Kitura.addHTTPServer(onPort: 8080, with: router)
+Kitura.run()
+</code></pre>
+
+<hr>
+
+<h3 id="">URLSession Explained</h3>
+
+<p><br>
+Let&rsquo;s take it step by step now, and explain some of the code. After
+you get set up with kitura, you should have this basic code structure:</p>
+
+<pre><code class="language-javascript">import Kitura
+import Foundation
+
+let router = Router()
+router.post(middleware: BodyParser()) //populates request body with POST parameters
+
+router.post(&quot;/players&quot;) { request, res, next in
+}
+
+Kitura.addHTTPServer(onPort: 8080, with: router)
+Kitura.run()
+</code></pre>
+
+<p><br>
+Depending on your use case, you will now need to populate the body of
+the request. Check out your API documentation for details.</p>
+
+<pre><code class="language-javascript">parameters[&quot;tennisPlayer&quot;] = &quot;Rafael Nadal&quot;
+</code></pre>
+
+<p><br></p>
+
+<p>Next we need to specify a URL for the API call, and specify which HTTP verb
+will use. In our case, it is POST.</p>
+
+<pre><code class="language-javascript">let url = URL(string: &quot;your-url-here&quot;)
+var request = URLRequest(url: url!)
+request.httpMethod = &quot;POST&quot;
+</code></pre>
+
+<p><br>
+After that, we need to modify a couple other details. Let&rsquo;s use JSONSerialization
+to go from a Foundation object to JSON data, since that is the type that
+httpBody is expecting. Next we set the headers to tell the server we will be using JSON.
+If you need to do basic authentication for your API call, this part can be a bit tricky.
+Check out this <a
+href="https://stackoverflow.com/questions/24379601/how-to-make-an-http-request-basic-auth-in-swift">
+stackoverflow</a> post for more details.</p>
+
+<pre><code class="language-javascript">let httpBody = try? JSONSerialization.data(withJSONObject: parameters, options: [])
+request.httpBody = httpBody
+request.addValue(&quot;application/json&quot;, forHTTPHeaderField: &quot;Content-Type&quot;)
+request.addValue(&quot;application/json&quot;, forHTTPHeaderField: &quot;Accept&quot;)
+</code></pre>
+
+<p><br>
+The last step is to Create the URLSession and pass in our request. Then we
+have to convert our data to a readable format, like a string, and send the
+response back.</p>
+
+<pre><code class="language-javascript">URLSession.shared.dataTask(with: request) { (data, response, error) in
+    let returnData = String(data: data!, encoding: .utf8)
+    res.send(returnData!)
+}.resume()
+</code></pre>
+
+<hr>
+
+<p><h3 id="">KituraNet Explained</h3>
+<br>
+We start our KituraNet example with some import statements this basic code
+structure. The main logic of the code will go inside the router.post statement.</p>
+
+<pre><code class="language-javascript">import Kitura
+import Foundation
+import SwiftyJSON
+import KituraNet
+
+let router = Router()
+router.post(middleware: BodyParser()) //populates request.body with POST parameters
+var parameters = [String:String]() //parameters for API call
+var result: String = &quot;&quot; //stores final JSON response
+router.post(&quot;/players&quot;) { request, res, next in
+}
+Kitura.addHTTPServer(onPort: 8080, with: router)
+Kitura.run()
+</code></pre>
+
+<p><br>
+Next, we need to pass in our data. This will be different based on what API
+you are using, so check your API documentation for details. After we pass in
+our data, we use SwiftyJSON to convert our parameters to type &ldquo;data&rdquo;.</p>
+
+<pre><code class="language-javascript">let dataToSend = [&quot;tennisPlayer&quot;: &quot;Rafael Nadal&quot;]
+let bod = try! JSON(dataToSend).rawData()
+</code></pre>
+
+<p><br>
+After passing in our data, we need to create the request. This part can be a
+bit tricky, since sometimes the URL might be broken down into hostname and path.
+For example, if your url is &ldquo;<a href="https://www.yoursite.com&quot;">https://www.yoursite.com&quot;</a>, but the url needed to make the
+call is <a href="https://www.yoursite.com/examplePath">https://www.yoursite.com/examplePath</a>, then you might have to break up
+the options into .hostname(yoursite.com) and .path(examplePath). The schema
+should either be &ldquo;&rdquo; or &ldquo;https://&ldquo;. If you need to add authentication, simply
+add in .username(&ldquo;your-username-here&rdquo;) and .password(&ldquo;your-password-here&rdquo;).</p>
+
+<pre><code class="language-javascript">var options: [ClientRequest.Options] = [
+    .schema(&quot;&quot;),
+    .method(&quot;POST&quot;),
+    .path(&quot;your-url-here&quot;),
+]
+</code></pre>
+
+<p><br>
+Next we create our HTTP Request, and pass in our parameters which we set above. In the request, we
+convert our ClientResponse to JSON and set our result to be the response
+from the HTTP Request. I&rsquo;m leaving out error handling for clarity.</p>
+
+<pre><code class="language-javascript">let request = HTTP.request(options) { response in
+    if let responseStr = try response?.readString() {
+        result = responseStr
+    }
+}
+</code></pre>
+
+<p><br>
+Lastly, we simply need to convert our data that we sent from type &ldquo;data&rdquo; back
+to a readable format, like JSON. The final step is to send the result to the
+client.</p>
+
+<pre><code class="language-javascript">request.write(from: bod)
+request.end()
+res.send(result)
+</code></pre>
+
+<p><br>
+<hr>
+<h3 id="">Thoughts</h3>
+<br>
+After working through both implementations, I think both URLSession and KituraNet
+have some tricky parts to them in terms of syntax. For KituraNet the url might
+have to be broken down into schema, hostname, and path, which adds some overhead.
+For URLSession the auth is a bit tricky, in that you have to pass in the
+username and passwords as an encoded string, which adds some overhead as well.
+<mark>In terms of performance though, we have a clear winner:</mark> URLSession took about
+85ms to get the
+response, while KituraNet took around 280ms. In terms of the actual request,
+I think KitraNet is a bit easier to work with, since you have very simple
+syntax in HTTP.request, and only a response to work with. In conclusion, if
+performance is not an issue, it might be easier to work with KituraNet. Otherwise,
+URLSession is worth the extra overhead for the performance benefits. Please leave a comment if you have any questions.</p>
+
+    </div>
+
+    <div class="disqus">
+        <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'https-horeaporutiu-github-io-1';
+    var disqus_identifier = 'https:\/\/horeaporutiu.github.io\/blog\/two-approaches-to-api-calls-with-server-side-swift\/';
+    var disqus_title = 'Two Approaches to API Calls with Server-Side Swift';
+    var disqus_url = 'https:\/\/horeaporutiu.github.io\/blog\/two-approaches-to-api-calls-with-server-side-swift\/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </div>
+
+<div class="container has-text-centered top-pad">
+<hr>
+<a href="https://horeaporutiu.github.io/blog/two-approaches-to-api-calls-with-server-side-swift/#top"><i class="fa fa-arrow-up"></i></a>
+<hr>
+</div>
+
+<div class="section" id="footer">
+    <div class="container has-text-centered">
+        
+            Horea Porutiu © 2017. All rights reserved.
+        
+    </div>
+</div>
+</div>
+</div>
+
+
+<script>
+$('a[href^="https:\/\/horeaporutiu.github.io\/blog\/two-approaches-to-api-calls-with-server-side-swift\/#"]').click(function(e) {
+    e.preventDefault();
+    var target = this.hash;
+    $('html, body').animate({
+    scrollTop: $(target).offset().top
+    }, 500);
+    return false;
+})
+</script>
