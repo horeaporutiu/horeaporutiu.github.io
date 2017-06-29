@@ -6,12 +6,17 @@
     <description>Recent content in Blogs on Horea Porutiu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+<<<<<<< HEAD
     <lastBuildDate>Thu, 29 Jun 2017 16:14:34 -0700</lastBuildDate>
+=======
+    <lastBuildDate>Wed, 14 Jun 2017 16:14:34 -0700</lastBuildDate>
+>>>>>>> 2105f90776d8aab6333cca1f104cd13be27c4349
     
 	<atom:link href="https://horeaporutiu.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+<<<<<<< HEAD
       <title>SF IoT Meetup</title>
       <link>https://horeaporutiu.github.io/blog/sf-iot-meetup/</link>
       <pubDate>Thu, 29 Jun 2017 16:14:34 -0700</pubDate>
@@ -21,6 +26,8 @@
     </item>
     
     <item>
+=======
+>>>>>>> 2105f90776d8aab6333cca1f104cd13be27c4349
       <title>Two Approaches to API Calls with Server-Side Swift</title>
       <link>https://horeaporutiu.github.io/blog/two-approaches-to-api-calls-with-server-side-swift/</link>
       <pubDate>Wed, 14 Jun 2017 16:14:34 -0700</pubDate>

@@ -3,11 +3,14 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+<<<<<<< HEAD
     <loc>https://horeaporutiu.github.io/blog/sf-iot-meetup/</loc>
     <lastmod>2017-06-29T16:14:34-07:00</lastmod>
   </url>
   
   <url>
+=======
+>>>>>>> 2105f90776d8aab6333cca1f104cd13be27c4349
     <loc>https://horeaporutiu.github.io/blog/two-approaches-to-api-calls-with-server-side-swift/</loc>
     <lastmod>2017-06-14T16:14:34-07:00</lastmod>
   </url>
@@ -54,7 +57,11 @@
   
   <url>
     <loc>https://horeaporutiu.github.io/blog/</loc>
+<<<<<<< HEAD
     <lastmod>2017-06-29T16:14:34-07:00</lastmod>
+=======
+    <lastmod>2017-06-14T16:14:34-07:00</lastmod>
+>>>>>>> 2105f90776d8aab6333cca1f104cd13be27c4349
     <priority>0</priority>
   </url>
   
@@ -65,7 +72,11 @@
   
   <url>
     <loc>https://horeaporutiu.github.io/</loc>
+<<<<<<< HEAD
     <lastmod>2017-06-29T16:14:34-07:00</lastmod>
+=======
+    <lastmod>2017-06-14T16:14:34-07:00</lastmod>
+>>>>>>> 2105f90776d8aab6333cca1f104cd13be27c4349
     <priority>0</priority>
   </url>
   
