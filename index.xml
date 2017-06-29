@@ -6,98 +6,93 @@
     <description>Recent content on Horea Porutiu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-<<<<<<< HEAD
     <lastBuildDate>Thu, 29 Jun 2017 16:14:34 -0700</lastBuildDate>
-=======
-    <lastBuildDate>Wed, 14 Jun 2017 16:14:34 -0700</lastBuildDate>
->>>>>>> 2105f90776d8aab6333cca1f104cd13be27c4349
-    
+
+
 	<atom:link href="https://horeaporutiu.github.io/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+
+
     <item>
-<<<<<<< HEAD
       <title>SF IoT Meetup</title>
       <link>https://horeaporutiu.github.io/blog/sf-iot-meetup/</link>
       <pubDate>Thu, 29 Jun 2017 16:14:34 -0700</pubDate>
-      
+
       <guid>https://horeaporutiu.github.io/blog/sf-iot-meetup/</guid>
       <description>Last week, I went to a couple meet ups one of which being the SF IoT Meetup. The Meetup was hosted at APROE, a design and engineering firm. The venue was filled with machines and had an interesting electronics lab, which proved to be useful later when soldering was necessary for the Raspberry Pi kit. The Meetup was a hands-on workshop hosted by Taku Tamagawa, the head of Operations at Soracom.</description>
     </item>
-    
+
     <item>
-=======
->>>>>>> 2105f90776d8aab6333cca1f104cd13be27c4349
+
       <title>Two Approaches to API Calls with Server-Side Swift</title>
       <link>https://horeaporutiu.github.io/blog/two-approaches-to-api-calls-with-server-side-swift/</link>
       <pubDate>Wed, 14 Jun 2017 16:14:34 -0700</pubDate>
-      
+
       <guid>https://horeaporutiu.github.io/blog/two-approaches-to-api-calls-with-server-side-swift/</guid>
       <description>In this blog, i&amp;rsquo;m going to go over how to make an HTTP Post Request using Kitura (A Server-Side Swift Framework). First i&amp;rsquo;ll be making Post Requests using URLSession, and then using KituraNet. If you are not sure how to start up a Kitura project, go here. If you want to see another implementation of a HTTP Post Request with KituraNet, Rob Allen does a great job explaining his code.</description>
     </item>
-    
+
     <item>
       <title>Day 2 at Augmented World Expo</title>
       <link>https://horeaporutiu.github.io/blog/day-2-at-augmented-world-expo/</link>
       <pubDate>Mon, 05 Jun 2017 14:18:15 -0700</pubDate>
-      
+
       <guid>https://horeaporutiu.github.io/blog/day-2-at-augmented-world-expo/</guid>
       <description>The second day at AWE proved to be really really incredible. The biggest difference between the two days was that the Expo was open today, giving me the ability to try out all of the cool gadgets and headsets that I learned about previously. Some proved to be great, and others not so great. Ill give my thoughts on the speakers that I saw from Meta, Schell Games, and Kopin Corporation, as well as the products I tried out:</description>
     </item>
-    
+
     <item>
       <title>Day 1 at Augmented World Expo</title>
       <link>https://horeaporutiu.github.io/blog/day-1-at-augmented-world-expo/</link>
       <pubDate>Thu, 01 Jun 2017 14:18:15 -0700</pubDate>
-      
+
       <guid>https://horeaporutiu.github.io/blog/day-1-at-augmented-world-expo/</guid>
       <description>Today was my first day at AWE(Augmented World Expo), and other than waking up much earlier than usual (around 730), it was a pretty great day. On a complete side note, I learned to navigate the Caltrain today, which was nice. Especially since it&amp;rsquo;s a great way to get to the San Jose, South Bay area without having to deal with the rush hour traffic.
 In this blog, I am going to give my thoughts around my first big conference experience.</description>
     </item>
-    
+
     <item>
       <title>Intro to Augmented Reality</title>
       <link>https://horeaporutiu.github.io/blog/intro-to-augmented-reality/</link>
       <pubDate>Thu, 25 May 2017 14:18:15 -0700</pubDate>
-      
+
       <guid>https://horeaporutiu.github.io/blog/intro-to-augmented-reality/</guid>
       <description>So first and foremost I want to make a shoutout to Jacob W. Green, who wrote this great post about getting started with Augmented Reality. It&amp;rsquo;s extremely easy to follow, and very informative. His post uses augmented reality to overlay an image of an author over the cover of the corresponding book. Now this may or may not sound appealing to you, but I am extremely excited to be going to AWE (Augmented World Expo) next week, and what better way to get familiar with AR than by building a project.</description>
     </item>
-    
+
     <item>
       <title>Connecting Watson &amp;&amp; Kitura</title>
       <link>https://horeaporutiu.github.io/blog/connecting-watson--kitura/</link>
       <pubDate>Fri, 19 May 2017 14:18:15 -0700</pubDate>
-      
+
       <guid>https://horeaporutiu.github.io/blog/connecting-watson--kitura/</guid>
       <description>Hey guys! I haven&amp;rsquo;t written in a bit since I was exploring some cool technologies. In the past week, i&amp;rsquo;ve been hard at work learning about Kitura. In this blog, I will explain what I have learned, and help you get started learning Kitura and integrating your apps with Watson. Below is an iOS app that integrates text to speech and language translation services from watson. The source code to get started can be found here.</description>
     </item>
-    
+
     <item>
       <title>How to: Blog w/ Hugo and Github Pages</title>
       <link>https://horeaporutiu.github.io/blog/how-to-blog-w/-hugo-and-github-pages/</link>
       <pubDate>Wed, 10 May 2017 14:18:15 -0700</pubDate>
-      
+
       <guid>https://horeaporutiu.github.io/blog/how-to-blog-w/-hugo-and-github-pages/</guid>
       <description>This tutorial focuses on building exactly this: a Hugo site! If you follow these two videos, you should be able to build your own site and customize it within minutes. Please feel free to ask questions or drop some suggestions below!
  Setup Your Blog   Customize!   Enjoy!</description>
     </item>
-    
+
     <item>
       <title>OpenWhisk Actions &amp; API calls</title>
       <link>https://horeaporutiu.github.io/blog/openwhisk-actions--api-calls/</link>
       <pubDate>Fri, 05 May 2017 14:18:15 -0700</pubDate>
-      
+
       <guid>https://horeaporutiu.github.io/blog/openwhisk-actions--api-calls/</guid>
-      <description>In this blog, I will go over some of the basics of OpenWhisk and go over a simple example of an action that will load weather for your area. I assume you already have a Bluemix account. If you do not, go here to get one. 
+      <description>In this blog, I will go over some of the basics of OpenWhisk and go over a simple example of an action that will load weather for your area. I assume you already have a Bluemix account. If you do not, go here to get one.
 Initial Setup 1) Setup OpenWhisk CLI (Command Line Interface). If you&amp;rsquo;ve verified your setup from the setup above, you should be good to go!</description>
     </item>
-    
+
     <item>
       <title>Run Node.js server with Bluemix</title>
       <link>https://horeaporutiu.github.io/blog/run-node.js-server-with-bluemix/</link>
       <pubDate>Thu, 04 May 2017 14:18:15 -0700</pubDate>
-      
+
       <guid>https://horeaporutiu.github.io/blog/run-node.js-server-with-bluemix/</guid>
       <description>Let&amp;rsquo;s learn how to build that Node.js web-server using Bluemix! If you prefer video tutorials, please watch my video on this topic. Before we start, you will need to do a few things.
  Initial Setup 1) Get a Bluemix Account
@@ -106,15 +101,15 @@ Initial Setup 1) Setup OpenWhisk CLI (Command Line Interface). If you&amp;rsquo;
 4) Install cf command line tool
 Starter Code Open up terminal, and use the following git commands: $ git clone https://github.</description>
     </item>
-    
+
     <item>
       <title>about</title>
       <link>https://horeaporutiu.github.io/about/</link>
       <pubDate>Thu, 09 Mar 2017 13:19:25 +0800</pubDate>
-      
+
       <guid>https://horeaporutiu.github.io/about/</guid>
       <description>I enjoy writing code and being outside. I&amp;rsquo;m currently working as a Developer Advocate for IBM, promoting IBM&amp;rsquo;s Platform-As-A-Service Bluemix. I graduated from UC San Diego in March 2017 with a double major in Computer &amp;amp; Management Science. I played tennis for the UC San Diego Men&amp;rsquo;s Tennis Team and competed in over 140 matches.When I was not on the court, I was in the classroom or at office hours trying to excel in my classes.</description>
     </item>
-    
+
   </channel>
 </rss>
