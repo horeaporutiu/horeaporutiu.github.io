@@ -40,7 +40,7 @@
 
 
     
-    <link rel="stylesheet" href="https://horeaporutiu.github.io/css/light-style.css?t=1500319800">
+    <link rel="stylesheet" href="https://horeaporutiu.github.io/css/light-style.css?t=1501288940">
     
 
 
@@ -160,15 +160,20 @@ to check out the source code of the app I made in the video below you can find i
 <a href="https://github.com/horeaporutiu/text-to-speech-swift">here</a>. I simply added
 a language translation service on top of the existing text to speech service.</p>
 
-<div class="scroll-wrapper" id = "youtube"><iframe width="560" height="315"
+<div class = "video-container" ><iframe
 src="https://www.youtube.com/embed/pN4BrtXp7lQ" allowfullscreen></iframe></div>
+<br>
 
-<p>Below is the site that I launched with Kitura.</p>
+Below is the site that I launched with Kitura.
+<br>
 
-<div class="scroll-wrapper" id = "youtube"><iframe width="560" height="315"
+
+<br>
+
+<div class = "video-container" ><iframe
 src="https://www.youtube.com/embed/MKJIhObJLlg" allowfullscreen></iframe></div>
-
-<p>The site shown above can be found at <a href="https://horeaporutiu.github.io/watsonSpeaks/">https://horeaporutiu.github.io/watsonSpeaks/</a></p>
+<br>
+The site shown above can be found at https://horeaporutiu.github.io/watsonSpeaks/
 
 <hr>
 
@@ -187,9 +192,10 @@ $ cd kituraProj
 <br>
 <h4 id="setup">Adding Kitura to Swift Project</h4>
 
-<p>Next we have to add dependencies and let Swift download all of the
+
+Next we have to add dependencies and let Swift download all of the
 packages it needs to run the Kitura server. To do this, we have to add some
-lines in our <b>Package.swift</b> file.</p>
+lines in our <b>Package.swift</b> file.
 
 <pre><code class="language-toml">
 import PackageDescription
@@ -227,67 +233,67 @@ Kitura.addHTTPServer(onPort: 8080, with: router)
 Kitura.run()
 </code></pre>
 
-<p>Compile the app.</p>
+Compile the app.
 
 <pre><code class="language-toml">$ swift build
 </code></pre>
 
-<p>Create an xcode app.
+Create an xcode app.
 <pre><code class="language-toml">$ swift package generate-xcodeproj
-</code></pre></p>
+</code></pre>
 
-<p>Open the project in Xcode.</p>
+Open the project in Xcode.
 
 <pre><code class="language-toml">$ open kituraProj.xcodeproj
 </code></pre>
 
-<p>Change scheme to be as shown below.
-<img src="../../img/manageScheme.png" alt="Mountain View" style="width:600px;height:330px;"></p>
+Change scheme to be as shown below.
+<img src="../../img/manageScheme.png" alt="Mountain View" style="width:600px;height:330px;">
 
-<p>Run the project. Product -&gt; Run. Allow incoming connections.
+Run the project. Product -> Run. Allow incoming connections.
 <br>
-Open your browser at <a href="http://localhost:8080">http://localhost:8080</a>
+Open your browser at http://localhost:8080
 <hr>
 <br>
-<h4 id="setup">Hosting Static Content</h4></p>
+<h4 id="setup">Hosting Static Content</h4>
 
-<p>To host simple static sites, you can simply add this line in your <b>main.swift</b> file. This will
-look for any files in the &lsquo;public&rsquo; directory. Put all of your styling files such as CSS and HTML in that directory.</p>
+To host simple static sites, you can simply add this line in your <b>main.swift</b> file. This will
+look for any files in the 'public' directory. Put all of your styling files such as CSS and HTML in that directory.
 
 <pre><code class="language-toml">$ router.all("/", middleware: StaticFileServer())
 </code></pre>
 
-<p>Then create your public directory, add a simple index.html file in there, and add some code.</p>
+Then create your public directory, add a simple index.html file in there, and add some code.
 
 <pre><code class="language-toml">$ mkdir public
 $ touch index.html
 </code></pre>
 
-<p>In the index file, add a basic skeleton. You can find one here: <a href="http://htmlshell.com/">http://htmlshell.com/</a>
-Run the app again, Open your browser at <a href="http://localhost:8080">http://localhost:8080</a> and your new site should be there!
+In the index file, add a basic skeleton. You can find one here: http://htmlshell.com/
+Run the app again, Open your browser at http://localhost:8080 and your new site should be there!
 <hr>
 <br>
-<h4 id="setup">Connecting Watson and Kitura</h4></p>
+<h4 id="setup">Connecting Watson and Kitura</h4>
 
-<p>To connect to watson, first clone a sample app.</p>
+To connect to watson, first clone a sample app.
 
 <pre><code class="language-toml">$ git clone https://github.com/watson-developer-cloud/text-to-speech-swift.git
 </code></pre>
 
-<p>Follow the instructions <a href="https://github.com/watson-developer-cloud/text-to-speech-swift">https://github.com/watson-developer-cloud/text-to-speech-swift</a> to get started.
+Follow the instructions https://github.com/watson-developer-cloud/text-to-speech-swift to get started.
 Once you have your app working, we want to have the server side code and the client side code different
 directories. One directory should be your kituraProj(server side), and the other is watsonApp.
 <hr>
 <br>
 <h4 id="setup">Watson Translates</h4>
-<br></p>
+<br>
 
-<p>To add Swift SDK frameworks, we first need to add the frameworks in our linked frameworks.
+To add Swift SDK frameworks, we first need to add the frameworks in our linked frameworks.
 Watch the video below to learn how to add the frameworks by going into our Carthage directory
 and opening the correct file. The last step in the video shows adding the
-&ldquo;Run Scrip Phase&rdquo; in the &ldquo;Build Phases&rdquo; section of our app.</p>
+"Run Scrip Phase" in the "Build Phases" section of our app.
 
-<div class="scroll-wrapper" id = "youtube"><iframe width="560" height="315"
+<div class = "video-container" ><iframe
 src="https://www.youtube.com/embed/Y0jBojtzUk0" allowfullscreen></iframe></div>
 
 <p><br>

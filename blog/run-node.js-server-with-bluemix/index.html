@@ -40,7 +40,7 @@
 
 
     
-    <link rel="stylesheet" href="https://horeaporutiu.github.io/css/light-style.css?t=1500319800">
+    <link rel="stylesheet" href="https://horeaporutiu.github.io/css/light-style.css?t=1501288940">
     
 
 
@@ -151,7 +151,11 @@ ga('send', 'pageview');
 
     <div class="container markdown  fade-in two  top-pad">
         <p>Let&rsquo;s learn how to build that Node.js web-server using Bluemix! If you prefer video
-tutorials, please watch <a href="https://www.youtube.com/watch?v=enTQkCb8vlU&t=4s">my video</a> on this topic.
+tutorials, please watch the video below.</p>
+
+<p><div class = "video-container" ><iframe
+src="https://www.youtube.com/embed/enTQkCb8vlU" allowfullscreen></iframe></div>
+<br>
 Before we start, you will need to do a few things.</p>
 
 <hr>
@@ -220,14 +224,19 @@ instead:</p>
 <p>Now we must come up with a unique URL for our site. This is done by changing the host: line in the manifest.yml file.</p>
 
 <p>Change the line host: hello-node to username-hello-node. Should look similar to this, except with your
-own user name, not mine. <img src="../../img/hostName.png" alt="Mountain View" style="width:600px;height:100px;"></p>
+own user name, not mine.</p>
+
+<p><img src="../../img/hostName.png" alt="Mountain View"></p>
 
 <p>One last command:</p>
 
-<pre><code class="language-toml">$ cf push
+<p><pre><code class="language-toml">$ cf push
 </code></pre>
+<br></p>
 
-<p>If you run into this error <img src="../../img/failed.png" alt="Mountain View" style="width:600px;height:130px;"> it is because the name is not unique.
+<p><img src="../../img/failed.png" alt="Mountain View"></p>
+
+<p>If you run into the error above it is because the name is not unique.
 <hr>
 <h4 id="conclusion">Conclusion</h4></p>
 

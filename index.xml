@@ -6,10 +6,21 @@
     <description>Recent content on Horea Porutiu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 16 Jul 2017 16:14:34 -0700</lastBuildDate>
+    <lastBuildDate>Fri, 28 Jul 2017 15:34:51 -0700</lastBuildDate>
     
 	<atom:link href="https://horeaporutiu.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>OpenWhisk Web Actions and REST API calls</title>
+      <link>https://horeaporutiu.github.io/blog/openwhisk-web-actions-and-rest-api-calls/</link>
+      <pubDate>Fri, 28 Jul 2017 15:34:51 -0700</pubDate>
+      
+      <guid>https://horeaporutiu.github.io/blog/openwhisk-web-actions-and-rest-api-calls/</guid>
+      <description>Demo of the finished product:
+  
+In this blog post, i&amp;rsquo;ll go over how to use IBM&amp;rsquo;s Function-as-a-Service (Faas), OpenWhisk, to build a basic translation app. Our app will get its data by using REST API calls to talk to Watson. Keep in mind that you could use any sort of back end written in any langauge you want, but I chose OpenWhisk since I wanted to get familiar working with a Function-as-a-Service.</description>
+    </item>
     
     <item>
       <title>Thoughts on my first few months at IBM</title>
@@ -101,7 +112,8 @@ Initial Setup 1) Setup OpenWhisk CLI (Command Line Interface). If you&amp;rsquo;
       <pubDate>Thu, 04 May 2017 14:18:15 -0700</pubDate>
       
       <guid>https://horeaporutiu.github.io/blog/run-node.js-server-with-bluemix/</guid>
-      <description>Let&amp;rsquo;s learn how to build that Node.js web-server using Bluemix! If you prefer video tutorials, please watch my video on this topic. Before we start, you will need to do a few things.
+      <description>Let&amp;rsquo;s learn how to build that Node.js web-server using Bluemix! If you prefer video tutorials, please watch the video below.
+ Before we start, you will need to do a few things.
  Initial Setup 1) Get a Bluemix Account
 2) Install Homebrew if you have a mac. Otherwise, skip this step.
 3) Install npm/node for Mac or npm/node for Windows
@@ -115,7 +127,7 @@ Starter Code Open up terminal, and use the following git commands: $ git clone h
       <pubDate>Thu, 09 Mar 2017 13:19:25 +0800</pubDate>
       
       <guid>https://horeaporutiu.github.io/about/</guid>
-      <description>I enjoy writing code and being outside. I&amp;rsquo;m currently working as a Developer Advocate for IBM, promoting IBM&amp;rsquo;s Platform-As-A-Service Bluemix. I graduated from UC San Diego in March 2017 with a double major in Computer &amp;amp; Management Science. I played tennis for the UC San Diego Men&amp;rsquo;s Tennis Team and competed in over 140 matches.When I was not on the court, I was in the classroom or at office hours trying to excel in my classes.</description>
+      <description>I enjoy writing code and being outside. I&amp;rsquo;m currently working as a Developer Advocate for IBM, promoting IBM&amp;rsquo;s Platform-As-A-Service Bluemix. I graduated from UC San Diego in March 2017 with a double major in Computer &amp;amp; Management Science. I played tennis for the UC San Diego Men&amp;rsquo;s Tennis Team where I was awarded team MVP, and reached a NCAA National Ranking of 13 with partner Alex Miaule.When I was not on the court, I was in the classroom or at office hours trying to excel in my classes.</description>
     </item>
     
   </channel>
