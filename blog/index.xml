@@ -17,7 +17,7 @@
       <pubDate>Thu, 10 Aug 2017 15:56:17 -0700</pubDate>
       
       <guid>https://horeaporutiu.github.io/blog/token-authentication-with-openwhisk/</guid>
-      <description>Ready to launch that sweet Web-App that sweeps Siri out of the water? If so, you&amp;rsquo;re in the right place. I&amp;rsquo;ll show you how to generate a token server-side for Watson&amp;rsquo;s Speech To Text Service in your Web-App.
+      <description>Ready to launch that sweet Web-App that sweeps Siri out of the water? If so, you&amp;rsquo;re in the right place. I&amp;rsquo;ll show you how to  generate a token server-side for Watson&amp;rsquo;s Speech To Text Service in your Web-App.
 OpenWhisk Now you may be thinking&amp;hellip;OpenWhisk? Why not use Node.js? Everyone knows Node, and there&amp;rsquo;s much more documentation if I get stuck. While I cannot refute the last statement, I&amp;rsquo;ll show you why using a new technology like OpenWhisk, similar to Amazon&amp;rsquo;s Lambda, might save you cash down the road.</description>
     </item>
     

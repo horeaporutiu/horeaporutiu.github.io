@@ -40,7 +40,7 @@
 
 
     
-    <link rel="stylesheet" href="https://horeaporutiu.github.io/css/light-style.css?t=1502416520">
+    <link rel="stylesheet" href="https://horeaporutiu.github.io/css/light-style.css?t=1502467964">
     
 
 
@@ -118,7 +118,7 @@ ga('send', 'pageview');
         <h2 class="title is-1 top-pad strong-post-title"><a href="https://horeaporutiu.github.io/blog/token-authentication-with-openwhisk/">Token Authentication with OpenWhisk</a></h2>
             <div class="post-data">
                 Aug 10, 2017 |
-                2 minutes read
+                3 minutes read
             </div>
 
             
@@ -151,8 +151,9 @@ ga('send', 'pageview');
 
     <div class="container markdown  fade-in two  top-pad">
         <p>Ready to launch that sweet Web-App that sweeps Siri out of the water? If so,
-you&rsquo;re in the right place. I&rsquo;ll show you how to <mark>generate a token
-server-side</mark> for Watson&rsquo;s Speech
+you&rsquo;re in the right place. I&rsquo;ll show you how to <mark>
+<a href="https://www.ibm.com/watson/developercloud/doc/common/getting-started-tokens.html">generate a token
+server-side</a></mark> for Watson&rsquo;s Speech
 To Text Service in your Web-App.</p>
 
 <p><b><h4 id="setup">OpenWhisk</h4></b>
@@ -189,6 +190,7 @@ function main(params) {
 
   //promises are a way for our action to work asynchronously
   var promise = new Promise(function(resolve, reject) {
+    //using our Simplified HTTP request lient
     request({
       url:     speechToTextUrl,
       headers : {
@@ -225,7 +227,17 @@ what your Web Action URL is, read more <a href="https://console.bluemix.net/docs
 in your Web-App. Since we are using a serverless (Function As A Service) cloud platform, you don&rsquo;t have to keep your server up <sup>24</sup>&frasl;<sub>7</sub> as
 you would if you spun up an old-school Node.js server. What that means for you is that
 you&rsquo;ll be saving a lot of money since you are billed <mark>a very small
-percentage of a cent per second of execution</mark>. Now that&rsquo;s pretty neat :)</p>
+percentage of a cent per second of execution</mark>. Now that&rsquo;s pretty neat :) Check out
+the working example below.</p>
+
+<!-- <iframe src="https://giphy.com/embed/UJTYB5YX2X6z6" width="480" height="392" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/UJTYB5YX2X6z6">via GIPHY</a></p> -->
+
+<!-- <div style="width:100%;height:0;padding-bottom:63%;position:relative;"><iframe src="https://giphy.com/embed/N4pwD87JaIV7a" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/N4pwD87JaIV7a">via GIPHY</a></p> -->
+
+<p><div style="width:100%;height:0;padding-bottom:56%;position:relative;"><iframe
+ src="https://giphy.com/embed/UJTYB5YX2X6z6" width="100%" height="100%"
+  style="position:absolute" frameBorder="0" class="giphy-embed"
+   allowFullScreen></iframe></div><p></p>
 
     </div>
 
