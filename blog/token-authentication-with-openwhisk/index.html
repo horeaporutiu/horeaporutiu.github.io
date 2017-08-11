@@ -14,10 +14,10 @@
 <title>
 
 
-     How to: Blog w/ Hugo and Github Pages 
+     Token Authentication with OpenWhisk 
 
 </title>
-<link rel="canonical" href="https://horeaporutiu.github.io/blog/how-to-blog-w/-hugo-and-github-pages/">
+<link rel="canonical" href="https://horeaporutiu.github.io/blog/token-authentication-with-openwhisk/">
 
 
 
@@ -115,31 +115,31 @@ ga('send', 'pageview');
     </div>
 
     <div class="container  fade-in two ">
-        <h2 class="title is-1 top-pad strong-post-title"><a href="https://horeaporutiu.github.io/blog/how-to-blog-w/-hugo-and-github-pages/">How to: Blog w/ Hugo and Github Pages</a></h2>
+        <h2 class="title is-1 top-pad strong-post-title"><a href="https://horeaporutiu.github.io/blog/token-authentication-with-openwhisk/">Token Authentication with OpenWhisk</a></h2>
             <div class="post-data">
-                May 10, 2017 |
-                1 minute read
+                Aug 10, 2017 |
+                2 minutes read
             </div>
 
             
                 <div class="blog-share">
                 Share this:
-                <a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=Read%20How%20to%3a%20Blog%20w%2f%20Hugo%20and%20Github%20Pages%20https%3a%2f%2fhoreaporutiu.github.io%2fblog%2fhow-to-blog-w%2f-hugo-and-github-pages%2f"
+                <a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=Read%20Token%20Authentication%20with%20OpenWhisk%20https%3a%2f%2fhoreaporutiu.github.io%2fblog%2ftoken-authentication-with-openwhisk%2f"
                 onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
                 <i class="fa fa-twitter"></i>
                 <span class="hidden">Twitter</span>
                 </a>
-                <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fhoreaporutiu.github.io%2fblog%2fhow-to-blog-w%2f-hugo-and-github-pages%2f"
+                <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fhoreaporutiu.github.io%2fblog%2ftoken-authentication-with-openwhisk%2f"
                 onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
                 <i class="fa fa-facebook"></i>
                 <span class="hidden">Facebook</span>
                 </a>
-                <a class="icon-pinterest" href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fhoreaporutiu.github.io%2fblog%2fhow-to-blog-w%2f-hugo-and-github-pages%2f&amp;description=How%20to%3a%20Blog%20w%2f%20Hugo%20and%20Github%20Pages"
+                <a class="icon-pinterest" href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fhoreaporutiu.github.io%2fblog%2ftoken-authentication-with-openwhisk%2f&amp;description=Token%20Authentication%20with%20OpenWhisk"
                 onclick="window.open(this.href, 'pinterest-share','width=580,height=296');return false;">
                 <i class="fa fa-pinterest"></i>
                 <span class="hidden">Pinterest</span>
                 </a>
-                <a class="icon-google-plus" href="https://plus.google.com/share?url=https%3a%2f%2fhoreaporutiu.github.io%2fblog%2fhow-to-blog-w%2f-hugo-and-github-pages%2f"
+                <a class="icon-google-plus" href="https://plus.google.com/share?url=https%3a%2f%2fhoreaporutiu.github.io%2fblog%2ftoken-authentication-with-openwhisk%2f"
                 onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
                 <i class="fa fa-linkedin"></i>
                 <span class="hidden">Google+</span>
@@ -150,27 +150,82 @@ ga('send', 'pageview');
     </div>
 
     <div class="container markdown  fade-in two  top-pad">
-        <p>This tutorial focuses on building exactly this: a Hugo site! If you follow these two videos,
-you should be able to build your own site and customize it within minutes. Please feel free
-to ask questions or drop some suggestions below!</p>
+        <p>Ready to launch that sweet Web-App that sweeps Siri out of the water? If so,
+you&rsquo;re in the right place. I&rsquo;ll show you how to <mark>generate a token
+server-side</mark> for Watson&rsquo;s Speech
+To Text Service in your Web-App.</p>
 
-<hr>
+<p><b><h4 id="setup">OpenWhisk</h4></b>
+Now you may be thinking&hellip;OpenWhisk? Why
+not use Node.js? Everyone knows Node, and there&rsquo;s much more documentation
+if I get stuck. While I cannot refute the last statement, I&rsquo;ll show you why
+using a new technology like OpenWhisk, similar to Amazon&rsquo;s Lambda, might save
+you cash down the road.</p>
 
-<h4 id="setup">Setup Your Blog</h4>
+<p><b><h4 id="setup">Getting Started</h4></b>
+Every OpenWhisk function needs to have &ldquo;main&rdquo;. Inside this function, we will
+make an HTTP Request to fetch our token so that we can later use this in our
+client-side code, without having to reveal our credentials.</p>
 
-<div class = "video-container" ><iframe
-src="https://www.youtube.com/embed/oUjk6wpJn7I" allowfullscreen></iframe></div>
+<p><b><h4 id="setup">The Code</h4></b>
+Don&rsquo;t be afraid to copy and paste. Just make sure you <mark>read the comments and
+understand</mark> what you&rsquo;re
+pasting&hellip;</p>
 
-<hr>
+<pre><code class="language-javascript">
+//package that we need to make an HTTP call
+var request = require('request');
 
-<h4 id="setup">Customize!</h4>
+function main(params) {
+  //Speech To Text Service Credentials
+  var username = &quot;username&quot;;
+  var password = &quot;password&quot;;
 
-<div class = "video-container" ><iframe
-src="https://www.youtube.com/embed/4W9sVoVYMLo" allowfullscreen></iframe></div>
+  //Authorization needs to be in base64 for some reason...
+  var auth = &quot;Basic &quot; + new Buffer(username + &quot;:&quot; + password).toString(&quot;base64&quot;);
 
-<hr>
+  //url for our HTTP Request
+  var speechToTextUrl = &quot;https://stream.watsonplatform.net/authorization/api/v1/token?url=https://stream.watsonplatform.net/speech-to-text/api&quot;;
 
-<p>Enjoy!</p>
+  //promises are a way for our action to work asynchronously
+  var promise = new Promise(function(resolve, reject) {
+    request({
+      url:     speechToTextUrl,
+      headers : {
+            &quot;Authorization&quot; : auth
+        }
+    },
+    function(error, response, body){
+      resolve ({
+        //tell browser we will receive plain text from our HTTP Request
+        headers: {
+          'Content-Type': 'text/plain'
+        },
+        //display the token returned from our HTTP request
+        body: body
+      });
+    });
+  });
+  return promise;
+}
+
+</code></pre>
+
+<p><b><h4 id="setup">Webify</h4></b>
+The only thing we have to do is turn this into a web action. Simply
+add the &ndash;web true param as shown below.</p>
+
+<pre><code>wsk action create {yourPackage}/speechToText speechToText.js --web true
+</code></pre>
+
+<p><b><h4 id="setup">Conclusion</h4></b>
+Now that you have a web action that returns a token, all you have to do
+is make a simple XHR Request to your Web Action URL (if you do not know
+what your Web Action URL is, read more <a href="https://console.bluemix.net/docs/openwhisk/openwhisk_webactions.html#openwhisk_webactions">here</a>) and you&rsquo;ll be ready to use Voice Recognition
+in your Web-App. Since we are using a serverless (Function As A Service) cloud platform, you don&rsquo;t have to keep your server up <sup>24</sup>&frasl;<sub>7</sub> as
+you would if you spun up an old-school Node.js server. What that means for you is that
+you&rsquo;ll be saving a lot of money since you are billed <mark>a very small
+percentage of a cent per second of execution</mark>. Now that&rsquo;s pretty neat :)</p>
 
     </div>
 
@@ -178,9 +233,9 @@ src="https://www.youtube.com/embed/4W9sVoVYMLo" allowfullscreen></iframe></div>
         <div id="disqus_thread"></div>
 <script type="text/javascript">
     var disqus_shortname = 'https-horeaporutiu-github-io-1';
-    var disqus_identifier = 'https:\/\/horeaporutiu.github.io\/blog\/how-to-blog-w\/-hugo-and-github-pages\/';
-    var disqus_title = 'How to: Blog w\/ Hugo and Github Pages';
-    var disqus_url = 'https:\/\/horeaporutiu.github.io\/blog\/how-to-blog-w\/-hugo-and-github-pages\/';
+    var disqus_identifier = 'https:\/\/horeaporutiu.github.io\/blog\/token-authentication-with-openwhisk\/';
+    var disqus_title = 'Token Authentication with OpenWhisk';
+    var disqus_url = 'https:\/\/horeaporutiu.github.io\/blog\/token-authentication-with-openwhisk\/';
 
     (function() {
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
@@ -194,7 +249,7 @@ src="https://www.youtube.com/embed/4W9sVoVYMLo" allowfullscreen></iframe></div>
 
 <div class="container has-text-centered top-pad">
 <hr>
-<a href="https://horeaporutiu.github.io/blog/how-to-blog-w/-hugo-and-github-pages/#top"><i class="fa fa-arrow-up"></i></a>
+<a href="https://horeaporutiu.github.io/blog/token-authentication-with-openwhisk/#top"><i class="fa fa-arrow-up"></i></a>
 <hr>
 </div>
 
@@ -210,7 +265,7 @@ src="https://www.youtube.com/embed/4W9sVoVYMLo" allowfullscreen></iframe></div>
 
 
 <script>
-$('a[href^="https:\/\/horeaporutiu.github.io\/blog\/how-to-blog-w\/-hugo-and-github-pages\/#"]').click(function(e) {
+$('a[href^="https:\/\/horeaporutiu.github.io\/blog\/token-authentication-with-openwhisk\/#"]').click(function(e) {
     e.preventDefault();
     var target = this.hash;
     $('html, body').animate({
