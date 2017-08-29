@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+<meta name="description" content="A blog to discuss emerging tech.">
+
+<base href="https://horeaporutiu.github.io/">
+<title>
+
+
+     Updating Cloudant Database via Rest API 
+
+</title>
+<link rel="canonical" href="https://horeaporutiu.github.io/blog/updating-cloudant-database-via-rest-api/">
+
+
+
+
+
+
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/styles/default.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Ubuntu+Mono:400,400i,700,700i|Raleway:500|Work+Sans">
+
+
+
+    
+    <link rel="stylesheet" href="https://horeaporutiu.github.io/css/light-style.css?t=1504021651">
+    
+
+
+
+
+<link rel="shortcut icon"
+
+    href="https://horeaporutiu.github.io/img/favicon.ico"
+
+>
+
+
+
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-98632670-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+
+
+
+
+
+</head>
+
+<body lang="en">
+  
+
+<div class="section" id="top">
+
+    <div class="container hero  fade-in one ">
+    <h1 class="bold-title is-1">Horea's Blog</h1>
+    </div>
+
+
+<div class="section  fade-in two ">
+
+    <div class="container">
+    <hr>
+<nav class="nav nav-center">
+    <span id="nav-toggle" class="nav-toggle"  onclick="document.getElementById('nav-menu').classList.toggle('is-active');">
+      <span></span>
+      <span></span>
+      <span></span>
+    </span>
+    <div id="nav-menu" class="nav-left nav-menu">
+      <span class="nav-item">
+        <a href="https://horeaporutiu.github.io/">Main</a>
+      </span>
+      <span class="nav-item">
+        <a href="https://horeaporutiu.github.io/#about">About</a> 
+      </span>
+    
+    
+      <span class="nav-item">
+        <a href="https://horeaporutiu.github.io/#blog">Back to blog</a> 
+      </span>
+    
+      <span class="nav-item">
+        <a href="https://horeaporutiu.github.io/#contact">Contact</a>
+      </span>
+    
+      <span class="nav-item">
+        <a href="https://horeaporutiu.github.io/index.xml"><i class="fa fa-rss"></i></a>
+      </span>
+    
+    </div>
+</nav>
+<hr>
+    </div>
+
+    <div class="container  fade-in two ">
+        <h2 class="title is-1 top-pad strong-post-title"><a href="https://horeaporutiu.github.io/blog/updating-cloudant-database-via-rest-api/">Updating Cloudant Database via Rest API</a></h2>
+            <div class="post-data">
+                Aug 28, 2017 |
+                4 minutes read
+            </div>
+
+            
+                <div class="blog-share">
+                Share this:
+                <a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=Read%20Updating%20Cloudant%20Database%20via%20Rest%20API%20https%3a%2f%2fhoreaporutiu.github.io%2fblog%2fupdating-cloudant-database-via-rest-api%2f"
+                onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                <i class="fa fa-twitter"></i>
+                <span class="hidden">Twitter</span>
+                </a>
+                <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fhoreaporutiu.github.io%2fblog%2fupdating-cloudant-database-via-rest-api%2f"
+                onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                <i class="fa fa-facebook"></i>
+                <span class="hidden">Facebook</span>
+                </a>
+                <a class="icon-pinterest" href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fhoreaporutiu.github.io%2fblog%2fupdating-cloudant-database-via-rest-api%2f&amp;description=Updating%20Cloudant%20Database%20via%20Rest%20API"
+                onclick="window.open(this.href, 'pinterest-share','width=580,height=296');return false;">
+                <i class="fa fa-pinterest"></i>
+                <span class="hidden">Pinterest</span>
+                </a>
+                <a class="icon-google-plus" href="https://plus.google.com/share?url=https%3a%2f%2fhoreaporutiu.github.io%2fblog%2fupdating-cloudant-database-via-rest-api%2f"
+                onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                <i class="fa fa-linkedin"></i>
+                <span class="hidden">Google+</span>
+                </a>
+                </div>
+            
+
+    </div>
+
+    <div class="container markdown  fade-in two  top-pad">
+        <p>Trying to update your Cloudant Database via REST API? Not sure how to get
+started? You&rsquo;ve come to the right place. In this post, I&rsquo;ll teach you
+how to update your database programmatically using Node.js and REST API
+calls. As a bonus, I&rsquo;ll show you how to keep
+track of the objects in your database, and how to sort your database according
+to your most popular objects.</p>
+
+<p>I will assume you have created a Cloudant account through IBM Cloud
+<a href="https://console.bluemix.net/registration/">&ldquo;Bluemix&rdquo;</a>, and
+have created a database and a document through the Cloudant UI. (There is a
+create database and create document button at the top-right corner of Cloudant
+Website.) Now let&rsquo;s get to the fun part.</p>
+
+<p><b><h4 id="setup">Getting the Current State of our Database</h4></b>
+The first thing we want to do is make a simple &lsquo;GET&rsquo; request to get the current
+state of our database. To setup our GET request, we need to provide our
+authentication and Cloudant URL. This should look something like this:
+P.S (The below username and password do NOT work, they are simply for learning
+  purposes.)</p>
+
+<pre><code class="language-javascript">
+var auth = 'Basic ' + new Buffer(&quot;https://8bb71405-438f-4372-9b43-975e0220f3cd-bluemix&quot; +
+':' +&quot;935624a91478c5f8918d3d0b2e104ef6fe825939ed2304f28ec2225fa9a952df&quot;).toString('base64');
+
+var options = {
+  url: https://8bb71405-438f-4372-9b43-975e0220f3cd-bluemix.cloudant.com/db1/1e37764c1dfc4d448bc2450e9c04ecd0,
+  method: 'GET',
+  headers: {
+      'Authorization': auth;
+  }
+};
+</code></pre>
+
+<p><br>
+The first thing to note is <mark>the URL</mark>. The first part of the URL is simply
+your username - it ends with &lsquo;-bluemix.cloudant.com&rsquo;. The next part of the URL
+is your specific database. In my case, I named my database &lsquo;db1&rsquo;. The last part of
+the URL is the specific document in that database. The document that I created
+in &lsquo;db1&rsquo; has an &lsquo;id&rsquo; of &ldquo;1e37764c1dfc4d448bc2450e9c04ecd0&rdquo;. Next, your
+authentication. The first part of the authentication header is your Cloudant
+Username - the first part of the URL. The second (and last) part of the
+authentication is simply your Cloudant Password. Now, let&rsquo;s use the
+request package (if you don&rsquo;t have it, you can simply do an npm install request)
+to make the GET call.</p>
+
+<pre><code class="language-javascript">request.get(options, function(err, body){
+  if (err) {
+    console.log(err);
+  }
+  var docObj = JSON.parse(body.body)
+  var revID = docObj._rev;
+}
+</code></pre>
+
+<p><b><h4 id="setup">Inserting into Cloudant</h4></b>
+The most important part of the request body is the Revision ID or &lsquo;._rev&rsquo;.
+This is a number that Cloudant assigns to keep track of the number of times
+you have updated your specific document. <mark>We need this number to
+update our database</mark>.
+Now that we have the revision ID number, we can use that to update the same
+document over and over. To insert into our database, we will simply make a
+PUT request and use the revID that we got from the GET request to ensure
+that we will update our current document. As an example, I simply inserted a
+tennis player into the database.</p>
+
+<pre><code class="language-javascript">request.get(options, function(err, body){
+  var docObj = JSON.parse(body.body)
+  var revID = docObj._rev;
+  var tennisPlayers = {name:'Andre Agassi'}
+
+  var putOptions = {
+    url: https://8bb71405-438f-4372-9b43-975e0220f3cd-bluemix.cloudant.com/db1/1e37764c1dfc4d448bc2450e9c04ecd0,
+    method: 'PUT',
+    json: {
+      '_rev': revID,
+      'index':tennisPlayers //where all of our data goes
+    },
+    headers: {
+        'Authorization': auth,
+        'Content-Type': 'application/json' //needed since we are inserting json
+    }
+  };
+
+  request.put(putOptions, function(err, body){
+    console.log(body) //should give you a message saying that you have successfully inserted
+  });
+}
+</code></pre>
+
+<p><b><h4 id="setup">Bonus: Sorting Database by Relevance</h4></b>
+In this last section, i&rsquo;ll show you how to sort your database by
+relevance using a simple sort function. Let&rsquo;s say you want to sort a
+database of tennis players by the number of grand slams they win.
+Let&rsquo;s say you want to update after every Grand Slam.</p>
+
+<pre><code class="language-javascript">var grandSlamWinners = [
+  {name:'Rafael Nadal',grandSlams:'15'},
+  {name:'Andre Agassi',grandSlams:'8'},
+  {name:'Roger Federer',grandSlams:'19'}
+]
+</code></pre>
+
+<p><br>
+Let&rsquo;s suppose Roger Federer wins the 2017 US Open&hellip;which would
+be a &lsquo;joke&rsquo; as quoted by Federer himself. Then we would want to increment
+the number of slams he has. Thus, we need to search through the
+database to see if the player has already won a slam, and if he
+has, then we want to increment his number of slams. Otherwise,
+its their first slam and we insert and them with their first Grand
+Slam. P.S. (You will probably want to do a check if the database
+is empty, and if it is, insert anyway, but this is beside the point).</p>
+
+<pre><code class="language-javascript">var tennisPlayerToInsert = {name:'Roger Federer'}
+var insertIntoDict = true;
+
+  //check every player in the database for a match
+  for(var i=0;i&lt;grandSlamWinners.length;i++){
+     if (grandSlamWinners[i].name == tennisPlayerToInsert.name) {
+       insertIntoDict=false;
+       grandSlamWinners[i].grandSlams++;
+       break;
+     }
+  }
+  //if player is not in DB, add it!
+  if(insertIntoDict){
+    grandSlamWinners.push({
+      name: tennisPlayerToInsert.name,
+      grandSlams: 1
+    });
+  }
+
+</code></pre>
+
+<p><br>
+First we check every single player in database to check if the US Open
+Slam Winner is a past winner. If they are, we set the flag to false,
+and increment their slam number. Otherwise, congrats on their first slam!
+One more bit&hellip;let&rsquo;s sort by descending slams, since we want to see
+the most famous players first.</p>
+
+<pre><code class="language-javascript">grandSlamWinners.sort(function(a, b) {
+  return (b.grandSlams) - (a.grandSlams);
+});
+</code></pre>
+
+<p><br>
+And that&rsquo;s it! Hope you learned a bit more about Cloudant and databases
+in general.</p>
+
+    </div>
+
+    <div class="disqus">
+        <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'https-horeaporutiu-github-io-1';
+    var disqus_identifier = 'https:\/\/horeaporutiu.github.io\/blog\/updating-cloudant-database-via-rest-api\/';
+    var disqus_title = 'Updating Cloudant Database via Rest API';
+    var disqus_url = 'https:\/\/horeaporutiu.github.io\/blog\/updating-cloudant-database-via-rest-api\/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </div>
+
+<div class="container has-text-centered top-pad">
+<hr>
+<a href="https://horeaporutiu.github.io/blog/updating-cloudant-database-via-rest-api/#top"><i class="fa fa-arrow-up"></i></a>
+<hr>
+</div>
+
+<div class="section" id="footer">
+    <div class="container has-text-centered">
+        
+            Horea Porutiu © 2017. All rights reserved.
+        
+    </div>
+</div>
+</div>
+</div>
+
+
+<script>
+$('a[href^="https:\/\/horeaporutiu.github.io\/blog\/updating-cloudant-database-via-rest-api\/#"]').click(function(e) {
+    e.preventDefault();
+    var target = this.hash;
+    $('html, body').animate({
+    scrollTop: $(target).offset().top
+    }, 500);
+    return false;
+})
+</script>

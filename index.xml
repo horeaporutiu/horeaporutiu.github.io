@@ -6,10 +6,20 @@
     <description>Recent content on Horea Porutiu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 10 Aug 2017 15:56:17 -0700</lastBuildDate>
+    <lastBuildDate>Mon, 28 Aug 2017 11:11:20 -0700</lastBuildDate>
     
 	<atom:link href="https://horeaporutiu.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Updating Cloudant Database via Rest API</title>
+      <link>https://horeaporutiu.github.io/blog/updating-cloudant-database-via-rest-api/</link>
+      <pubDate>Mon, 28 Aug 2017 11:11:20 -0700</pubDate>
+      
+      <guid>https://horeaporutiu.github.io/blog/updating-cloudant-database-via-rest-api/</guid>
+      <description>Trying to update your Cloudant Database via REST API? Not sure how to get started? You&amp;rsquo;ve come to the right place. In this post, I&amp;rsquo;ll teach you how to update your database programmatically using Node.js and REST API calls. As a bonus, I&amp;rsquo;ll show you how to keep track of the objects in your database, and how to sort your database according to your most popular objects.
+I will assume you have created a Cloudant account through IBM Cloud &amp;ldquo;Bluemix&amp;rdquo;, and have created a database and a document through the Cloudant UI.</description>
+    </item>
     
     <item>
       <title>Token Authentication with OpenWhisk</title>
