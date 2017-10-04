@@ -15,6 +15,11 @@
   height: 100%;
 }
 
+#stockBot {
+  width: 50%;
+  height: 50%;
+}
+
 .pic {
     max-width: 100%;
     height: auto;
