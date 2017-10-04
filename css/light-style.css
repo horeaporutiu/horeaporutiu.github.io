@@ -15,10 +15,10 @@
   height: 100%;
 }
 
-#watsonTranslate, #stockBot {
+/* #watsonTranslate, #stockBot {
   height: 50%;
   width: 50%;
-}
+} */
 
 .pic {
     max-width: 100%;
