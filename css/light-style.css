@@ -15,9 +15,9 @@
   height: 100%;
 }
 
-#stockBot {
-  width: 50%;
+#watsonTranslate, #stockBot {
   height: 50%;
+  width: 50%;
 }
 
 .pic {
