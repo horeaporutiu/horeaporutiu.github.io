@@ -6,19 +6,10 @@
     <description>Recent content in Blogs on Horea Porutiu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 30 Aug 2017 11:11:20 -0700</lastBuildDate>
+    <lastBuildDate>Mon, 28 Aug 2017 11:11:20 -0700</lastBuildDate>
     
 	<atom:link href="https://horeaporutiu.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Emit Conference</title>
-      <link>https://horeaporutiu.github.io/blog/emit-conference/</link>
-      <pubDate>Wed, 30 Aug 2017 11:11:20 -0700</pubDate>
-      
-      <guid>https://horeaporutiu.github.io/blog/emit-conference/</guid>
-      <description>Have you ever thought of going into Dev-Ops? Ever thought of all of the work that goes into hosting and providing an application that is viewable all across the globe, regardless of how many users are using the app at one time? Well that is what the Dev-Ops engineers work on, all the time. The promise of serverless and event-driven architectures, which is what Emit Conference was based on, takes this notion of Dev-Ops and automates it.</description>
-    </item>
     
     <item>
       <title>Updating Cloudant Database via Rest API</title>
