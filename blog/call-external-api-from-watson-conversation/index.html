@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+<meta name="description" content="A blog to discuss emerging tech.">
+
+<base href="https://horeaporutiu.github.io/">
+<title>
+
+
+     Call External API From Watson Conversation 
+
+</title>
+<link rel="canonical" href="https://horeaporutiu.github.io/blog/call-external-api-from-watson-conversation/">
+
+
+
+
+
+
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/styles/default.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Ubuntu+Mono:400,400i,700,700i|Raleway:500|Work+Sans">
+
+
+
+    
+    <link rel="stylesheet" href="https://horeaporutiu.github.io/css/light-style.css?t=1507599414">
+    
+
+
+
+
+<link rel="shortcut icon"
+
+    href="https://horeaporutiu.github.io/img/favicon.ico"
+
+>
+
+
+
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-98632670-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+
+
+
+
+
+</head>
+
+<body lang="en">
+  
+
+<div class="section" id="top">
+
+    <div class="container hero  fade-in one ">
+    <h1 class="bold-title is-1">Horea's Blog</h1>
+    </div>
+
+
+<div class="section  fade-in two ">
+
+    <div class="container">
+    <hr>
+<nav class="nav nav-center">
+    <span id="nav-toggle" class="nav-toggle"  onclick="document.getElementById('nav-menu').classList.toggle('is-active');">
+      <span></span>
+      <span></span>
+      <span></span>
+    </span>
+    <div id="nav-menu" class="nav-left nav-menu">
+      <span class="nav-item">
+        <a href="https://horeaporutiu.github.io/">Main</a>
+      </span>
+      <span class="nav-item">
+        <a href="https://horeaporutiu.github.io/#about">About</a> 
+      </span>
+    
+      <span class="nav-item">
+        <a href="https://horeaporutiu.github.io/#projects">Projects</a> 
+      </span>
+    
+    
+      <span class="nav-item">
+        <a href="https://horeaporutiu.github.io/#blog">Back to blog</a> 
+      </span>
+    
+      <span class="nav-item">
+        <a href="https://horeaporutiu.github.io/#contact">Contact</a>
+      </span>
+    
+      <span class="nav-item">
+        <a href="https://horeaporutiu.github.io/index.xml"><i class="fa fa-rss"></i></a>
+      </span>
+    
+    </div>
+</nav>
+<hr>
+    </div>
+
+    <div class="container  fade-in two ">
+        <h2 class="title is-1 top-pad strong-post-title"><a href="https://horeaporutiu.github.io/blog/call-external-api-from-watson-conversation/">Call External API From Watson Conversation</a></h2>
+            <div class="post-data">
+                Oct 9, 2017 |
+                3 minutes read
+            </div>
+
+            
+                <div class="blog-share">
+                Share this:
+                <a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=Read%20Call%20External%20API%20From%20Watson%20Conversation%20https%3a%2f%2fhoreaporutiu.github.io%2fblog%2fcall-external-api-from-watson-conversation%2f"
+                onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                <i class="fa fa-twitter"></i>
+                <span class="hidden">Twitter</span>
+                </a>
+                <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fhoreaporutiu.github.io%2fblog%2fcall-external-api-from-watson-conversation%2f"
+                onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                <i class="fa fa-facebook"></i>
+                <span class="hidden">Facebook</span>
+                </a>
+                <a class="icon-pinterest" href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fhoreaporutiu.github.io%2fblog%2fcall-external-api-from-watson-conversation%2f&amp;description=Call%20External%20API%20From%20Watson%20Conversation"
+                onclick="window.open(this.href, 'pinterest-share','width=580,height=296');return false;">
+                <i class="fa fa-pinterest"></i>
+                <span class="hidden">Pinterest</span>
+                </a>
+                <a class="icon-google-plus" href="https://plus.google.com/share?url=https%3a%2f%2fhoreaporutiu.github.io%2fblog%2fcall-external-api-from-watson-conversation%2f"
+                onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                <i class="fa fa-linkedin"></i>
+                <span class="hidden">Google+</span>
+                </a>
+                </div>
+            
+
+    </div>
+
+    <div class="container markdown  fade-in two  top-pad">
+        <p>I&rsquo;ve had a lot of trouble tackling this problem in the past when I
+ wanted to create chatbots with Watson Conversation. I&rsquo;ve also read
+ countless posts that didn&rsquo;t explain it to the level where I felt
+comfortable doing this on my own. Let me try to bridge that gap.
+In this post, i&rsquo;ll use <b>Node.js</b> to show you how to create an instance of the Watson Conversation API using a REST call, and then call
+another API before returning a response to the user! Nice! The <a href="https://github.com/horeaporutiu/Watson-Conversation-External-API">code</a> can be found on Github. Also, I will use NPM (Node Package Manager), so you will need to <a href="https://www.npmjs.com/get-npm">install it</a> if you do not have it.</p>
+
+<p><b><h4 id="setup">Getting Started</h4></b></p>
+
+<p>1) Create Watson Conversation service in Bluemix.</p>
+
+<p>2) Click on your Conversation Service in Bluemix, then click &lsquo;Launch tool&rsquo; to get to the Watson Conversation interface.</p>
+
+<p>3) Create a new workspace and inside this workspace create an intent called &lsquo;translate&rsquo;.</p>
+
+<p>4) Add &lsquo;translate this phrase.&rsquo; as a user example for this intent.</p>
+
+<p>5) Go back to your main page for your workspace, click on the three dots and then click &lsquo;view details&rsquo; and copy your
+Workspace ID to have handy for later.</p>
+
+<p><b><h4 id="setup">Code</h4></b></p>
+
+<p>In my code, I will set up a simple server to run on port 8081(not shown below for simplicity), and then create an instance of the Watson Conversation API. You will need your own username and password from your Bluemix credentials page.</p>
+
+<pre><code class="language-javascript">var watson = require('watson-developer-cloud');
+
+var conversation = watson.conversation({
+    username: conversationUserame,
+    password: conversationPassword,
+    version: 'v1',
+    version_date: '2017-05-26'
+  });
+
+</code></pre>
+
+<p><br>
+I then call the message API (you need to input your workspace id from above),
+ and pass in a phrase that will trigger our &lsquo;translate&rsquo; intent. Then, in our callback
+function, we check to make sure Watson has identified the correct intent, and then call our translate function(which
+will call our external API). <b> Your translate function can be different than mine - that is where you will do your
+external call to the API.</b> After our external API returns, we simply set the output text to be the response of our
+API call.</p>
+
+<pre><code class="language-javascript">var context = {};
+  
+  conversation.message({
+    workspace_id: 'your workspace id',
+    input: {'text': 'translate this phrase.'},
+    context: context
+  },  function(err, response) {
+    if (err)
+      console.log('error:', err);
+    else {
+      console.log(response)
+      if(response.intents.length &gt; 0 &amp;&amp; response.intents[0].intent === 'translate'){
+        translate(response.input.text).then(function(translatedResopnse){
+          response.output.text = translatedResopnse
+          console.log(JSON.stringify(response,null,2))        
+        });
+      }
+    }
+
+  });
+
+</code></pre>
+
+<p><br>
+That&rsquo;s pretty much all there is to it. Also, here is the translate function, which will call the Watson Translation
+API and translate the phrase from our user. You will need service credentials for this call as you did for the
+Conversation API. I return a promise to make sure that only after the external API finished, the Conversation will
+return the response to the user. Otherwise, we might get errors.</p>
+
+<pre><code class="language-javascript">function translate(userInput) {
+
+  return new Promise((resolve, reject) =&gt; {
+
+    var data = {};
+    
+    data.source = 'en';
+    data.target = 'es';
+    data.text = userInput;
+    
+    request.post({
+        headers: {'content-type':'application/json'},
+        url : transUrl,
+        json : data,
+        auth: {
+          user: translationUsername,
+          pass: translationPassword
+        }
+    }, function (error, response, body){
+        if (error) {
+            console.log(error);
+            resolve(error);
+        } else {
+            console.log(body);
+            resolve(body.translations[0].translation);
+        }
+    });
+
+  });        
+
+}
+
+</code></pre>
+
+<p><b><h4 id="setup">Results</h4></b></p>
+
+<p>Our console should look something like this if everything went smoothly. <img class = "pic" width="50%" height="50%"src="../../img/watsonConsole.png" alt="Mountain View" ></p>
+
+<p>Once again, if you want to see the full code (creating server and all), please check out my <a href="https://github.com/horeaporutiu/Watson-Conversation-External-API">Github repo</a>. And of course, if this helped you at all please star it ;)</p>
+
+<p><b><h4 id="setup">Conclusion</h4></b></p>
+
+<p>Watson Conversation is an extremely powerful service that can be
+used to call external APIs with moderate ease. If you need more help,
+please also check out the official <a href="https://www.ibm.com/watson/developercloud/conversation/api/v1/?node#send_message">API docs</a>.</p>
+
+    </div>
+
+    <div class="disqus">
+        <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'https-horeaporutiu-github-io-1';
+    var disqus_identifier = 'https:\/\/horeaporutiu.github.io\/blog\/call-external-api-from-watson-conversation\/';
+    var disqus_title = 'Call External API From Watson Conversation';
+    var disqus_url = 'https:\/\/horeaporutiu.github.io\/blog\/call-external-api-from-watson-conversation\/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </div>
+
+<div class="container has-text-centered top-pad">
+<hr>
+<a href="https://horeaporutiu.github.io/blog/call-external-api-from-watson-conversation/#top"><i class="fa fa-arrow-up"></i></a>
+<hr>
+</div>
+
+<div class="section" id="footer">
+    <div class="container has-text-centered">
+        
+            Horea Porutiu © 2017. All rights reserved.
+        
+    </div>
+</div>
+</div>
+</div>
+
+
+<script>
+$('a[href^="https:\/\/horeaporutiu.github.io\/blog\/call-external-api-from-watson-conversation\/#"]').click(function(e) {
+    e.preventDefault();
+    var target = this.hash;
+    $('html, body').animate({
+    scrollTop: $(target).offset().top
+    }, 500);
+    return false;
+})
+</script>

@@ -6,10 +6,19 @@
     <description>Recent content in Blogs on Horea Porutiu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 28 Aug 2017 11:11:20 -0700</lastBuildDate>
+    <lastBuildDate>Mon, 09 Oct 2017 15:13:21 -0700</lastBuildDate>
     
 	<atom:link href="https://horeaporutiu.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Call External API From Watson Conversation</title>
+      <link>https://horeaporutiu.github.io/blog/call-external-api-from-watson-conversation/</link>
+      <pubDate>Mon, 09 Oct 2017 15:13:21 -0700</pubDate>
+      
+      <guid>https://horeaporutiu.github.io/blog/call-external-api-from-watson-conversation/</guid>
+      <description>I&amp;rsquo;ve had a lot of trouble tackling this problem in the past when I wanted to create chatbots with Watson Conversation. I&amp;rsquo;ve also read countless posts that didn&amp;rsquo;t explain it to the level where I felt comfortable doing this on my own. Let me try to bridge that gap. In this post, i&amp;rsquo;ll use Node.js to show you how to create an instance of the Watson Conversation API using a REST call, and then call another API before returning a response to the user!</description>
+    </item>
     
     <item>
       <title>Updating Cloudant Database via Rest API</title>
