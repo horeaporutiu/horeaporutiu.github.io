@@ -23,10 +23,6 @@
   height: 30em;
 }
 
-.widget {
-  max-height: auto;
-}
-
 /*.scroll-wrapper {
 	-webkit-overflow-scrolling: touch;
   overflow-y: scroll;

@@ -6,10 +6,19 @@
     <description>Recent content in Blogs on Horea Porutiu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 09 Oct 2017 15:13:21 -0700</lastBuildDate>
+    <lastBuildDate>Thu, 18 Jan 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://horeaporutiu.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>What I learned from my first lunch and learn</title>
+      <link>https://horeaporutiu.github.io/blog/what-i-learned-from-my-first-lunch-and-learn/</link>
+      <pubDate>Thu, 18 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://horeaporutiu.github.io/blog/what-i-learned-from-my-first-lunch-and-learn/</guid>
+      <description>I could pass out. I could just throw up in the middle of my presentation. I could just not have the ability to speak anymore — I would not be able to form any sentences. I’m trying to fall asleep the night before my first lunch and learn, but all these horrible thoughts are racing through my mind. Somehow I manage to fall asleep, and actually slept over 7 hours…amazing.</description>
+    </item>
     
     <item>
       <title>Call External API From Watson Conversation</title>
