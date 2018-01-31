@@ -39,16 +39,7 @@
 
 .nav-center a {
   display: block;
-  text-align: center;
-  display: none;
-}
-.nav-center a.icon {
-  display: block;
-}
-
-.topnav a.icon {
-  float: right;
-  display: block;
+  text-align: center;  
 }
 
 @media (min-width: 600px) {
