@@ -48,6 +48,18 @@
   float:right;
 }
 
+.nav-center.responsive {position: relative;}
+.nav-center.responsive .icon {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.nav-center.responsive a {
+  float: none;
+  display: block;
+  text-align: left;
+}
+
 
 
 @media (min-width: 600px) {
