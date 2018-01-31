@@ -34,8 +34,16 @@
 
 #firstTennisVid, secondTennisVid {
   display: block;
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: none;
+  margin-right: none;
+}
+
+#firstTennisVid, webDevIntro {
+  float: left;
+}
+
+#secondTennisVid, hugoBlog {
+  float: right;
 }
 
 .nav-center{
