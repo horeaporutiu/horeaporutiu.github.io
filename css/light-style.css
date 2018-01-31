@@ -37,9 +37,11 @@
   margin-right: auto;
 }
 
+.nav-center{
+  text-align: center;  
+}  
+
 .nav-center a {
-  display: block;
-  text-align: center;
   display: none;
 }
 
@@ -63,12 +65,13 @@
 
 
 @media (min-width: 600px) {
-  .nav-center a {
-      display: inline-block;
-  }
   .nav-center .icon {
     display: none;
   }
+  .nav-center a {
+      display: inline-block;
+  }
+  
 }
 
 /*.scroll-wrapper {
