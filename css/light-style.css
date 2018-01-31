@@ -67,7 +67,7 @@
 }
 
 @media (min-width: 600px) {
-  .nav-center .hamburger {
+  .hamburger {
     display: none;
   }
   .nav-center a {
