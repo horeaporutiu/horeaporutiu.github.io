@@ -37,6 +37,16 @@
   margin-right: auto;
 }
 
+.nav-center a {
+  display: block;
+}
+
+@media (min-width: 600px) {
+  .nav-center a {
+      display: block;
+  }
+}
+
 /*.scroll-wrapper {
 	-webkit-overflow-scrolling: touch;
   overflow-y: scroll;
