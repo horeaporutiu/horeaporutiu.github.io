@@ -137,7 +137,7 @@ ga('send', 'pageview');
         
         <a class="nav-item" href="#contact">Contact</a> 
 
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+        <a id = "hamburger"href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
     
     </nav>
     <hr>
@@ -514,7 +514,9 @@ $('a[href^="#"]').click(function(e) {
 function myFunction() {
     console.log('were in my func')
     var x = document.getElementById("myTopnav");
+    var navBar = document.getElementById("hamburger");
     if (x.className === "nav-center") {
+        navBar.hidden = true;
         x.className += " responsive";
     } else {
         x.className = "nav-center";
