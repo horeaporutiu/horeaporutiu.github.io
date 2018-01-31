@@ -69,7 +69,6 @@
 @media (min-width: 600px) {
   #hamburger {
     display: none;
-    color:black;
   }
   .nav-center a {
       display: inline-block;
