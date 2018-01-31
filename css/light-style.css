@@ -45,11 +45,17 @@
 
 .nav-center a.icon {
   display: block;
+  float:right;
 }
+
+
 
 @media (min-width: 600px) {
   .nav-center a {
       display: inline-block;
+  }
+  .nav-center .icon {
+    display: none;
   }
 }
 
