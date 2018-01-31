@@ -44,7 +44,7 @@
 
 @media (min-width: 600px) {
   .nav-center a {
-      display: block;
+      display: inline-block;
   }
 }
 
