@@ -39,7 +39,19 @@
 
 .nav-center a {
   display: block;
-  text-align: center;  
+  text-align: center;
+  display: none;
+}
+.nav-center a.icon {
+  display: block;
+}
+
+
+
+.topnav a:not(:first-child) {display: none;}
+.topnav a.icon {
+  float: right;
+  display: block;
 }
 
 @media (min-width: 600px) {
