@@ -32,18 +32,23 @@
   float: left;
 }
 
-#firstTennisVid, secondTennisVid {
+/* #firstTennisVid, secondTennisVid {
   display: block;
   margin-left: none;
   margin-right: none;
-}
+} */
 
 #firstTennisVid, webDevIntro {
   float: left;
+  text-align: center;  
+  
 }
 
 #secondTennisVid, hugoBlog {
   float: right;
+  margin-right: -2em;
+  text-align: center;  
+  
 }
 
 .nav-center{
