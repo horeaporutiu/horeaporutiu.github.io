@@ -41,14 +41,12 @@
 #firstTennisVid, webDevIntro {
   float: left;
   text-align: center;  
-  
 }
 
 #secondTennisVid, hugoBlog {
   float: right;
   margin-right: -2em;
   text-align: center;  
-  
 }
 
 .nav-center{
