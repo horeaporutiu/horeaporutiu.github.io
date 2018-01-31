@@ -38,12 +38,12 @@
   margin-right: none;
 } */
 
-#firstTennisVid, webDevIntro {
+#firstTennisVid, #webDevIntro {
   float: left;
   text-align: center;  
 }
 
-#secondTennisVid, hugoBlog {
+#secondTennisVid, #hugoBlog {
   float: right;
   margin-right: -2em;
   text-align: center;  
