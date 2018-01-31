@@ -140,7 +140,7 @@ ga('send', 'pageview');
         <a href="javascript:void(0);" style="font-size:15px;"
          class="icon" onclick="myFunction()">&#9776;
         </a>
-            
+
     </nav>
     <hr>
     </div>
@@ -513,15 +513,15 @@ $('a[href^="#"]').click(function(e) {
     return false;
 })
 
-// function myFunction() {
-//     console.log('were in my func')
-//     var x = document.getElementById("myTopnav");
-//     var navBar = document.getElementById("hamburger");
-//     if (x.className === "nav-center") {
-//         navBar.hidden = true;
-//         x.className += " responsive";
-//     } else {
-//         x.className = "nav-center";
-//     }
-// }
+function myFunction() {
+    console.log('were in my func')
+    var x = document.getElementById("myTopnav");
+    var navBar = document.getElementById("hamburger");
+    if (x.className === "nav-center") {
+        // navBar.hidden = true;
+        x.className += " responsive";
+    } else {
+        x.className = "nav-center";
+    }
+}
 </script>
