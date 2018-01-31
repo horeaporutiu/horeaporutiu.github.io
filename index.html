@@ -123,7 +123,7 @@ ga('send', 'pageview');
     
     <div class="hero-foot fade-in three">
     <hr>
-    <nav class="nav-center">
+    <nav id = "myTopnav" class="nav-center">
 
         <a class="nav-item" href="#blog">Blog</a> 
         
@@ -511,4 +511,13 @@ $('a[href^="#"]').click(function(e) {
     }, 500);
     return false;
 })
+
+function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "nav-center") {
+        x.className += " responsive";
+    } else {
+        x.className = "nav-center";
+    }
+}
 </script>
