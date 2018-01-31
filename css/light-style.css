@@ -38,6 +38,10 @@
   margin-right: none;
 } */
 
+.h4 {
+  text-align: center;    
+}
+
 #firstTennisVid, #webDevIntro {
   float: left;
   text-align: center;  
