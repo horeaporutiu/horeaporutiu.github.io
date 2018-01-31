@@ -43,13 +43,14 @@
   display: none;
 }
 
-.topnav a.icon {
+.nav-center a.icon {
   display: block;
 }
 
 @media (min-width: 600px) {
   .nav-center a {
       display: inline-block;
+      text-align: center;
   }
 }
 
