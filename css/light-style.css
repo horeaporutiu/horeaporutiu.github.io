@@ -32,22 +32,16 @@
   float: left;
 }
 
-/* #firstTennisVid, secondTennisVid {
-  display: block;
-  margin-left: none;
-  margin-right: none;
-} */
-
 .h4 {
   text-align: center;    
 }
 
-#firstTennisVid, #webDevIntro, thirdTennisVid, #hugoBlog, #toneAnalyzer {
+#firstTennisVid, #watsonSecondOpinion #webDevIntro, thirdTennisVid, #hugoBlog, #toneAnalyzer {
   float: left;
   text-align: center;  
 }
 
-#secondTennisVid, #fourthTennisVid, #hugoBlogPart2, #languageTranslation, #watsonConversation{
+#secondTennisVid, #fourthTennisVid, #hugoBlogPart2, #firstStepsBlockchain, #languageTranslation, #watsonConversation{
   float: right;
   margin-right: -2em;
   text-align: center;  
